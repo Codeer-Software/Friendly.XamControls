@@ -98,6 +98,7 @@ namespace Test
             cell.EmulateEdit("c");
             cell.SelectedIndex.Is(2);
         }
+
         [TestMethod]
         public void TestEmulateEditComboBoxSelectedIndexAsync()
         {
