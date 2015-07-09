@@ -1,0 +1,27 @@
+﻿<Window x:Class="XamApp.XamGridWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ig="http://schemas.infragistics.com/xaml" 
+        xmlns:local="clr-namespace:XamApp"
+        Title="XamGridWindow" Height="300" Width="300">
+
+    <Window.Resources>
+        <local:ComboItems x:Key="comboItems" />
+    </Window.Resources>
+    
+    <Grid>
+        <ig:XamGrid x:Name="_grid">
+            <ig:XamGrid.EditingSettings>  
+                <ig:EditingSettings AllowEditing="Cell" />  
+            </ig:XamGrid.EditingSettings>  
+            <ig:XamGrid.Columns>
+                <ig:TextColumn Key="Text" HeaderText="TextBox" />
+                <ig:ComboBoxColumn Key="Combo" Width="120" HorizontalContentAlignment="Stretch"
+                                   ItemsSource="{Binding Source={StaticResource comboItems}}"
+                                   HeaderText="ComboBox"
+                                   AllowEditingValidation="False" />
+                <ig:CheckBoxColumn Key="Check" Width="120" HorizontalContentAlignment="Stretch" HeaderText="CheckBox"/>
+            </ig:XamGrid.Columns>  
+        </ig:XamGrid>
+    </Grid>
+</Window>

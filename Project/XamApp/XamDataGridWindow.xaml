@@ -1,0 +1,11 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:igWPF="http://schemas.infragistics.com/xaml/wpf" x:Class="XamApp.XamDataGridWindow"
+        Title="XamDataGridWindow" Height="300" Width="300">
+    <Grid>
+
+        <igWPF:XamDataGrid HorizontalAlignment="Left" Margin="52,96,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
