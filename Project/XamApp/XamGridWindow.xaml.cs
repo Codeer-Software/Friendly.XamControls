@@ -23,11 +23,21 @@ namespace XamApp
             _grid.ItemsSource = data;
         }
 
-        class Data 
+        class Data
         {
             public string Text { get; set; }
             public string Combo { get; set; }
             public bool Check { get; set; }
+        }
+
+        void ConnectActiveCellChanged()
+        {
+            _grid.ActiveCellChanged += delegate { MessageBox.Show(""); };
+        }
+
+        void ConnectCellExitedEditMode()
+        {
+            _grid.CellExitedEditMode += delegate { MessageBox.Show(""); };
         }
     }
 
