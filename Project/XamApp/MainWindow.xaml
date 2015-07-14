@@ -4,21 +4,22 @@
         Title="MainWindow" Height="350" Width="525">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
         <Button x:Name="_buttonXamGrid" Content="XamGrid" Grid.Row="0" Grid.Column="0" Click="ButtonXamGridClick"/>
         <Button x:Name="_buttonXamDataGrid" Content="XamDataGrid" Grid.Row="0" Grid.Column="1" Click="ButtonXamDataGridClick"/>
+        <Button x:Name="_buttonXamRibbon" Content="XamRibbon" Grid.Row="0" Grid.Column="2" Click="ButtonXamRibbonClick"/>
+        <Button x:Name="_buttonXamDataTree" Content="XamDataTree" Grid.Row="1" Grid.Column="0" Click="ButtonXamDataTreeClick"/>
+        <Button x:Name="_buttonXamOutlookBar" Content="XamOutlookBar" Grid.Row="1" Grid.Column="1" Click="ButtonXamOutlookBarClick"/>
+        <Button x:Name="_buttonXamCalendar" Content="XamCalendar" Grid.Row="1" Grid.Column="2" Click="ButtonXamCalendarClick"/>
+        <Button x:Name="_buttonXamTabControl" Content="XamTabControl" Grid.Row="2" Grid.Column="0" Click="ButtonXamTabControlClick"/>
     </Grid>
 </Window>

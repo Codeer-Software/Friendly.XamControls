@@ -1,0 +1,17 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ig="http://schemas.infragistics.com/xaml" x:Class="XamApp.XamDataTreeWindow"
+        Title="XamDataTreeWindow" Height="300" Width="300">
+    <Grid>
+
+        <ig:XamDataTree x:Name="_tree" ItemsSource="{Binding Children}">
+            <ig:XamDataTree.GlobalNodeLayouts>
+                <ig:NodeLayout Key="Name"
+                               TargetTypeName="TreeData"
+                               DisplayMemberPath="Name" />
+            </ig:XamDataTree.GlobalNodeLayouts>
+        </ig:XamDataTree>
+
+    </Grid>
+</Window>

@@ -1,11 +1,51 @@
 ﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:igWPF="http://schemas.infragistics.com/xaml/wpf" x:Class="XamApp.XamDataGridWindow"
+        xmlns:igDP="http://schemas.infragistics.com/xaml/wpf" 
+        xmlns:igEditors="http://infragistics.com/Editors" 
+        x:Class="XamApp.XamDataGridWindow"
+        xmlns:local="clr-namespace:XamApp"
         Title="XamDataGridWindow" Height="300" Width="300">
+
+    <Window.Resources>
+        <Style x:Key="XamComboEditorStyle" TargetType="{x:Type igEditors:XamComboEditor}">
+            <Setter Property="ItemsSource" Value="{x:Static local:XamDataGridWindow.ComboItems}"/>
+        </Style>
+    </Window.Resources>
+    
     <Grid>
+        <igDP:XamDataGrid x:Name="_grid"
+            DataSource="{Binding GridData}">
 
-        <igWPF:XamDataGrid HorizontalAlignment="Left" Margin="52,96,0,0" VerticalAlignment="Top"/>
+            <igDP:XamDataGrid.FieldLayoutSettings>
+                <igDP:FieldLayoutSettings AutoGenerateFields="False"/>
+            </igDP:XamDataGrid.FieldLayoutSettings>
 
+            <igDP:XamDataGrid.FieldLayouts>
+                <igDP:FieldLayout>
+                    <igDP:FieldLayout.Fields>
+
+                        <igDP:Field Name="Text" Label="TextBox"/>
+                        
+                        <igDP:Field Name="Combo" Label="ComboBox" >
+                            <igDP:Field.Settings>
+                                <igDP:FieldSettings 
+                                    EditorType="{x:Type igEditors:XamComboEditor}" 
+                                    EditorStyle="{StaticResource XamComboEditorStyle}"/>
+                            </igDP:Field.Settings>
+                        </igDP:Field>
+
+                        <igDP:Field Name="Check" Label="CheckBox" >
+                            <igDP:Field.Settings>
+                                <igDP:FieldSettings 
+                                    EditorType="{x:Type igEditors:XamCheckEditor }"/>
+                            </igDP:Field.Settings>
+                        </igDP:Field>
+                        
+                    </igDP:FieldLayout.Fields>
+                </igDP:FieldLayout>
+            </igDP:XamDataGrid.FieldLayouts>
+
+        </igDP:XamDataGrid>
     </Grid>
 </Window>

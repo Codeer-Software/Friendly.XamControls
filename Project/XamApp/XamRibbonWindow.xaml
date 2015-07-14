@@ -1,0 +1,47 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Custom="http://infragistics.com/Ribbon" x:Class="XamApp.XamRibbonWindow"
+        Title="XamRibbonWindow" Height="300" Width="300">
+    <Grid>
+        <Custom:XamRibbon Height="144" VerticalAlignment="Top" ApplicationMenuMode="Office2010" Theme="Office2013">
+            <Custom:XamRibbon.ApplicationMenu2010>
+                <Custom:ApplicationMenu2010 Caption="File">
+                    <Custom:ApplicationMenu2010.Items>
+
+                        <Custom:ApplicationMenu2010Item>
+                            <Custom:ApplicationMenu2010Item.Header>
+                                <TextBlock Margin="5,0,0,0" Text="Just a button" />
+                            </Custom:ApplicationMenu2010Item.Header>
+                        </Custom:ApplicationMenu2010Item>
+
+                        <Custom:ApplicationMenu2010Item Header="Tab 1">
+                            <Custom:ApplicationMenu2010Item.Content>
+                                <TextBlock Text="Text in the first tab content" />
+                            </Custom:ApplicationMenu2010Item.Content>
+                        </Custom:ApplicationMenu2010Item>
+                        
+                        <Custom:ApplicationMenu2010Item Header="Tab 2">
+                            <Custom:ApplicationMenu2010Item.Content>
+                                <TextBlock Text="Text in the second tab content" />
+                            </Custom:ApplicationMenu2010Item.Content>
+                            
+                        </Custom:ApplicationMenu2010Item>
+                    </Custom:ApplicationMenu2010.Items>
+                </Custom:ApplicationMenu2010>
+            </Custom:XamRibbon.ApplicationMenu2010>
+
+
+            <Custom:XamRibbon.ApplicationMenu>
+                <Custom:ApplicationMenu/>
+            </Custom:XamRibbon.ApplicationMenu>
+            <Custom:XamRibbon.QuickAccessToolbar>
+                <Custom:QuickAccessToolbar/>
+            </Custom:XamRibbon.QuickAccessToolbar>
+            <Custom:RibbonTabItem Header="tab1"/>
+            <Custom:RibbonTabItem Header="tab2"/>
+        </Custom:XamRibbon>
+
+
+    </Grid>
+</Window>
