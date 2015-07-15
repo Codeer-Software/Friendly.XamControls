@@ -9,27 +9,28 @@ namespace XamApp
         {
             InitializeComponent();
 
-            Children = new List<TreeData>();
+            Children = new List<Data>();
             for (int i = 0; i < 100; i++)
             {
-                var c = new TreeData() { Name = i.ToString() };
-                c.Children.Add(new TreeData() { Name = i.ToString() + "-0" });
+                var c = new Data() { Name = i.ToString() };
+                c.Children.Add(new Data() { Name = i.ToString() + "-0" });
                 Children.Add(c);
             }
             DataContext = this;
         }
 
-        public List<TreeData> Children { get; set; }
-    }
+        public List<Data> Children { get; set; }
 
-    public class TreeData
-    {
-        public string Name { get; set; }
-        public List<TreeData> Children { get; set; }
-
-        public TreeData()
+        public class Data
         {
-            Children = new List<TreeData>();
+            public string Name { get; set; }
+            public List<Data> Children { get; set; }
+
+            public Data()
+            {
+                Children = new List<Data>();
+            }
         }
     }
+
 }

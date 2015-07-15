@@ -6,11 +6,11 @@ using System.Linq;
 
 namespace Friendly.XamControls
 {
-    public class XamGridCheckBoxCellDriver : XamGridCellDriver
+    public class XamGridCheckCellDriver : XamGridCellDriver
     {
         public bool? IsChecked { get { return Control.IdentifyByType<CheckBox>().IsChecked; } }
 
-        public XamGridCheckBoxCellDriver(XamGridCellDriver cell)
+        public XamGridCheckCellDriver(XamGridCellDriver cell)
             : base(cell.XamGrid, cell.AppVar) { }
 
         public void EmulateEdit(bool? check)
@@ -35,11 +35,11 @@ namespace Friendly.XamControls
         }
     }
 
-    public static class XamGridCheckBoxCellDriverExtensions
+    public static class XamGridCheckCellDriverExtensions
     {
-        public static XamGridCheckBoxCellDriver AsCheckBox(this XamGridCellDriver cell)
+        public static XamGridCheckCellDriver AsCheck(this XamGridCellDriver cell)
         {
-            return new XamGridCheckBoxCellDriver(cell);
+            return new XamGridCheckCellDriver(cell);
         }
     }
 }

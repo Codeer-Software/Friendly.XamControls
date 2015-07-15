@@ -13,11 +13,11 @@ using Codeer.Friendly.Windows.NativeStandardControls;
 namespace Test
 {
     [TestClass]
-    public class XamGridTest
+    public class XamDataGridTest
     {
         WindowsAppFriend _app;
         WindowControl _dlg;
-        XamGridDriver _grid;
+        XamDataGridDriver _grid;
 
         [TestInitialize]
         public void TestInitialize()
@@ -25,9 +25,9 @@ namespace Test
             _app = new WindowsAppFriend(Process.Start("XamApp.exe"));
             var main = WindowControl.FromZTop(_app);
             var a = new Async();
-            new WPFButtonBase(main.Dynamic()._buttonXamGrid).EmulateClick(a);
+            new WPFButtonBase(main.Dynamic()._buttonXamDataGrid).EmulateClick(a);
             _dlg = main.WaitForNextModal();
-            _grid = new XamGridDriver(_dlg.Dynamic()._grid);
+            _grid = new XamDataGridDriver(_dlg.Dynamic()._grid);
         }
 
         [TestCleanup]

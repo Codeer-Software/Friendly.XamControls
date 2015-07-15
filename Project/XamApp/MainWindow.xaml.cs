@@ -50,7 +50,5 @@ namespace XamApp
             var dlg = new XamTabControlWindow();
             dlg.ShowDialog();
         }
-
-        //初期化が必要なのはXamDataGridとXamDataTree
     }
 }

@@ -12,29 +12,42 @@ namespace XamApp
         {
             InitializeComponent();
 
-            GridData = new ObservableCollection<DataGridData>(new DataGridData[] { 
-               new DataGridData(){ Text = "text1", Combo = "a", Check = true},
-               new DataGridData(){ Text = "text2", Combo = "b", Check = true},
-               new DataGridData(){ Text = "text3", Combo = "c", Check = true},
+            GridData = new ObservableCollection<Data>();
             
-            });
+            for (int i = 0; i < 100; i++)
+            {
+                GridData.Add(new Data() { Text = "t" + i, Combo = "a", Check = true });
+            }
             DataContext = this;
-         //   CellValuePresenter.FromCell()
+
+            /*
+            Infragistics.Windows.Editors.XamTextEditor e;
+            e.Text*/
         }
 
-        public ObservableCollection<DataGridData> GridData { get; set; }
+        void ConnectActiveCellChanged()
+        {
+            _grid.CellActivated += delegate { MessageBox.Show(""); };
+        }
+
+        void ConnectCellExitedEditMode()
+        {
+            _grid.EditModeEnding += delegate { MessageBox.Show(""); };
+        }
+
+        public ObservableCollection<Data> GridData { get; set; }
         static public ObservableCollection<string> ComboItems { get; set; }
 
         static XamDataGridWindow() 
         {
             ComboItems = new ObservableCollection<string>(new[] { "a", "b", "c" });
         }
-    }
 
-    public class DataGridData
-    {
-        public string Text { get; set; }
-        public string Combo { get; set; }
-        public bool Check { get; set; }
+        public class Data
+        {
+            public string Text { get; set; }
+            public string Combo { get; set; }
+            public bool Check { get; set; }
+        }
     }
 }

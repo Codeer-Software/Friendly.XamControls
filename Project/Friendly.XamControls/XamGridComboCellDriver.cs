@@ -6,13 +6,13 @@ using System.Linq;
 
 namespace Friendly.XamControls
 {
-    public class XamGridComboBoxCellDriver : XamGridCellDriver
+    public class XamGridComboCellDriver : XamGridCellDriver
     {
         public string Text { get { return Control.IdentifyByType<ComboBox>().Text; } }
 
         public int SelectedIndex { get { return Control.IdentifyByType<ComboBox>().SelectedIndex; } }
 
-        public XamGridComboBoxCellDriver(XamGridCellDriver cell)
+        public XamGridComboCellDriver(XamGridCellDriver cell)
             : base(cell.XamGrid, cell.AppVar) { }
 
         public void EmulateEdit(int index)
@@ -58,11 +58,11 @@ namespace Friendly.XamControls
         }
     }
 
-    public static class XamGridComboBoxCellDriverExtensions
+    public static class XamGridComboCellDriverExtensions
     {
-        public static XamGridComboBoxCellDriver AsComboBox(this XamGridCellDriver cell)
+        public static XamGridComboCellDriver AsCombo(this XamGridCellDriver cell)
         {
-            return new XamGridComboBoxCellDriver(cell);
+            return new XamGridComboCellDriver(cell);
         }
     }
 }

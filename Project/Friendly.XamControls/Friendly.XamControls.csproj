@@ -56,12 +56,16 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Inside\SearcherInTarget.cs" />
     <Compile Include="Inside\Initializer.cs" />
+    <Compile Include="XamDataGridCellDriver.cs" />
     <Compile Include="XamDataGridDriver.cs" />
     <Compile Include="XamGridCellDriver.cs" />
-    <Compile Include="XamGridCheckBoxCellDriver.cs" />
-    <Compile Include="XamGridComboBoxCellDriver.cs" />
+    <Compile Include="XamDataGridCheckCellDriver.cs" />
+    <Compile Include="XamGridCheckCellDriver.cs" />
+    <Compile Include="XamDataGridComboCellDriver.cs" />
+    <Compile Include="XamGridComboCellDriver.cs" />
     <Compile Include="XamGridDriver.cs" />
-    <Compile Include="XamGridTextBoxCellDriver.cs" />
+    <Compile Include="XamDataGridTextCellDriver.cs" />
+    <Compile Include="XamGridTextCellDriver.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

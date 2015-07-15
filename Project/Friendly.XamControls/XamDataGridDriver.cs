@@ -1,11 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using Codeer.Friendly;
+using Codeer.Friendly.Dynamic;
+using Friendly.XamControls.Inside;
 
 namespace Friendly.XamControls
 {
-    class XamDataGridDriver
+    public class XamDataGridDriver : XamControlBase
     {
+        public XamDataGridDriver(AppVar src) : base(src) { }
+
+        public XamDataGridCellDriver GetCell(int row, int col)
+        {
+            return new XamDataGridCellDriver(AppVar, This.Records[row].Cells[col]);
+        }
     }
 }

@@ -11,9 +11,9 @@ namespace Friendly.XamControls
     {
         public AppVar XamGrid { get; private set; }
 
-        public bool IsActive { get { return this.Dynamic().IsActive; } }
+        public bool IsActive { get { return This.IsActive; } }
 
-        protected AppVar Control { get { return this.Dynamic().Control; } }
+        protected AppVar Control { get { return This.Control; } }
 
         internal XamGridCellDriver(AppVar grid, AppVar cell)
             : base(cell)

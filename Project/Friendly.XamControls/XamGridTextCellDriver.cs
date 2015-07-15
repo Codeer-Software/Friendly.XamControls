@@ -6,11 +6,11 @@ using System.Linq;
 
 namespace Friendly.XamControls
 {
-    public class XamGridTextBoxCellDriver : XamGridCellDriver
+    public class XamGridTextCellDriver : XamGridCellDriver
     {
         public string Text { get { return Control.IdentifyByType<TextBlock>().Text; } }
 
-        public XamGridTextBoxCellDriver(XamGridCellDriver cell)
+        public XamGridTextCellDriver(XamGridCellDriver cell)
             : base(cell.XamGrid, cell.AppVar) { }
 
         public void EmulateEdit(string text)
@@ -35,11 +35,11 @@ namespace Friendly.XamControls
         }
     }
 
-    public static class XamGridTextBoxCellDriverExtensions
+    public static class XamGridTextCellDriverExtensions
     {
-        public static XamGridTextBoxCellDriver AsTextBox(this XamGridCellDriver cell)
+        public static XamGridTextCellDriver AsText(this XamGridCellDriver cell)
         {
-            return new XamGridTextBoxCellDriver(cell);
+            return new XamGridTextCellDriver(cell);
         }
     }
 }

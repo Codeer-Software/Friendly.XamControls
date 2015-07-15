@@ -17,6 +17,8 @@ namespace Friendly.XamControls.Inside
 
         protected dynamic Static { get { return App.Type(GetType()); } }
 
+        protected dynamic This { get { return AppVar.Dynamic(); } }
+
         public XamControlBase(AppVar src) 
         {
             AppVar = src;
