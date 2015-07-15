@@ -5,15 +5,15 @@
         Title="XamOutlookBarWindow" Height="300" Width="300">
     <Grid>
 
-        <Custom:XamOutlookBar>
+        <Custom:XamOutlookBar x:Name="_outlook">
+            <Custom:OutlookBarGroup Header="Group 0">
+                <Grid>
+                    <TextBlock Text="0"/>
+                </Grid>
+            </Custom:OutlookBarGroup>
             <Custom:OutlookBarGroup Header="Group 1">
                 <Grid>
                     <TextBlock Text="1"/>
-                </Grid>
-            </Custom:OutlookBarGroup>
-            <Custom:OutlookBarGroup Header="Group 2">
-                <Grid>
-                    <TextBlock Text="2"/>
                 </Grid>
             </Custom:OutlookBarGroup>
         </Custom:XamOutlookBar>

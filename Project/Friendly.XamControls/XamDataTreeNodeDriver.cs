@@ -47,6 +47,7 @@ namespace Friendly.XamControls
         protected static void EmulateActivate(dynamic tree, dynamic node)
         {
             ScrollNodeIntoView(tree, node);
+            node.Control.Focus();
             node.IsActive = true;
         }
 

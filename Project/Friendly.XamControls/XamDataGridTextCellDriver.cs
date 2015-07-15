@@ -8,19 +8,19 @@ namespace Friendly.XamControls
 {
     public class XamDataGridTextCellDriver : XamDataGridCellDriver
     {
-        public string Text { get { return Control.IdentifyByType("Infragistics.Windows.Editors.XamTextEditor").Text; } }
+        public string Text { get { return AppVar.IdentifyByType("Infragistics.Windows.Editors.XamTextEditor").Text; } }
 
         public XamDataGridTextCellDriver(XamDataGridCellDriver cell)
             : base(cell.Grid, cell.AppVar) { }
 
         public void EmulateEdit(string text)
         {
-            Static.EmulateEdit(Control, text);
+            Static.EmulateEdit(this, text);
         }
 
         public void EmulateEdit(string text, Async async)
         {
-            Static.EmulateEdit(Control, text, async);
+            Static.EmulateEdit(this, text, async);
         }
 
         static void EmulateEdit(dynamic control, string text)

@@ -8,19 +8,19 @@ namespace Friendly.XamControls
 {
     public class XamDataGridCheckCellDriver : XamDataGridCellDriver
     {
-        public bool? IsChecked { get { return Control.IdentifyByType("Infragistics.Windows.Editors.XamCheckEditor").IsChecked; } }
+        public bool? IsChecked { get { return AppVar.IdentifyByType("Infragistics.Windows.Editors.XamCheckEditor").IsChecked; } }
 
         public XamDataGridCheckCellDriver(XamDataGridCellDriver cell)
             : base(cell.Grid, cell.AppVar) { }
 
         public void EmulateEdit(bool? check)
         {
-            Static.EmulateEdit(Control, check);
+            Static.EmulateEdit(this, check);
         }
 
         public void EmulateEdit(bool? check, Async async)
         {
-            Static.EmulateEdit(Control, check, async);
+            Static.EmulateEdit(this, check, async);
         }
 
         static void EmulateEdit(dynamic control, bool? check)

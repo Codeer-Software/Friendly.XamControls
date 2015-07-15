@@ -8,5 +8,10 @@ namespace XamApp
         {
             InitializeComponent();
         }
+
+        void ConnectSelectedGroupChanged()
+        {
+            _outlook.SelectedGroupChanged += delegate { MessageBox.Show(""); };
+        }
     }
 }

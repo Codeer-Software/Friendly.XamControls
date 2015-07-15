@@ -8,21 +8,21 @@ namespace Friendly.XamControls
 {
     public class XamGridComboCellDriver : XamGridCellDriver
     {
-        public string Text { get { return Control.IdentifyByType<ComboBox>().Text; } }
+        public string Text { get { return AppVar.IdentifyByType<ComboBox>().Text; } }
 
-        public int SelectedIndex { get { return Control.IdentifyByType<ComboBox>().SelectedIndex; } }
+        public int SelectedIndex { get { return AppVar.IdentifyByType<ComboBox>().SelectedIndex; } }
 
         public XamGridComboCellDriver(XamGridCellDriver cell)
-            : base(cell.Grid, cell.AppVar) { }
+            : base(cell.Grid, cell.CellData) { }
 
         public void EmulateEdit(int index)
         {
-            Static.EmulateEdit(Grid, this, index);
+            Static.EmulateEdit(Grid, CellData, index);
         }
 
         public void EmulateEdit(int index, Async async)
         {
-            Static.EmulateEdit(Grid, this, index, async);
+            Static.EmulateEdit(Grid, CellData, index, async);
         }
 
         static void EmulateEdit(dynamic grid, dynamic cell, int index)
@@ -38,12 +38,12 @@ namespace Friendly.XamControls
 
         public void EmulateEdit(string text)
         {
-            Static.EmulateEdit(Grid, this, text);
+            Static.EmulateEdit(Grid, CellData, text);
         }
 
         public void EmulateEdit(string text, Async async)
         {
-            Static.EmulateEdit(Grid, this, text, async);
+            Static.EmulateEdit(Grid, CellData, text, async);
         }
 
         static void EmulateEdit(dynamic grid, dynamic cell, string text)

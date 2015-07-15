@@ -10,7 +10,15 @@ namespace Friendly.XamControls
 
         public XamGridCellDriver GetCell(int row, int col)
         {
-            return new XamGridCellDriver(this, This.Rows[row].Cells[col]);
+            var cellData = This.Rows[row].Cells[col];
+            Static.ScrollCellIntoView(this, cellData);
+            return new XamGridCellDriver(this, cellData);
+        }
+
+        static void ScrollCellIntoView(dynamic grid, dynamic cell)
+        {
+            grid.ScrollCellIntoView(cell);
+            InvokeUtility.DoEvents();
         }
     }
 }

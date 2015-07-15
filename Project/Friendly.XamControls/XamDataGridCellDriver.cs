@@ -13,16 +13,6 @@ namespace Friendly.XamControls
 
         public bool IsActive { get { return This.IsActive; } }
 
-        protected AppVar Control 
-        {
-            get
-            {
-                Grid.Dynamic().BringRecordIntoView(This.Record);
-                App.Type(typeof(InvokeUtility)).DoEvents();
-                return App.Type().Infragistics.Windows.DataPresenter.CellValuePresenter.FromCell(AppVar);
-            }
-        }
-
         internal XamDataGridCellDriver(XamDataGridDriver grid, AppVar cell)
             : base(cell) 
         {
@@ -31,12 +21,12 @@ namespace Friendly.XamControls
 
         public void EmulateActivate()
         {
-            Static.EmulateActivate(Control);
+            Static.EmulateActivate(this);
         }
 
         public void EmulateActivate(Async async)
         {
-            Static.EmulateActivate(Control, async);
+            Static.EmulateActivate(this, async);
         }
 
         protected static void EmulateActivate(dynamic control)

@@ -10,7 +10,11 @@ namespace Friendly.XamControls
 
         public XamDataGridCellDriver GetCell(int row, int col)
         {
-            return new XamDataGridCellDriver(this, This.Records[row].Cells[col]);
+            var cell = This.Records[row].Cells[col];
+            This.BringRecordIntoView(cell.Record);
+            App.Type(typeof(InvokeUtility)).DoEvents();
+            var ctrl = App.Type().Infragistics.Windows.DataPresenter.CellValuePresenter.FromCell(cell);
+            return new XamDataGridCellDriver(this, ctrl);
         }
     }
 }

@@ -10,44 +10,30 @@ namespace Friendly.XamControls
     public class XamGridCellDriver : XamControlBase
     {
         public XamGridDriver Grid { get; private set; }
+        public AppVar CellData { get; private set; }
+        public bool IsActive { get { return CellData.Dynamic().IsActive; } }
 
-        public bool IsActive { get { return This.IsActive; } }
-
-        protected AppVar Control
-        {
-            get
-            {
-                Static.ScrollCellIntoView(Grid, this);
-                return This.Control;
-            }
-        }
-
-        internal XamGridCellDriver(XamGridDriver grid, AppVar cell)
-            : base(cell)
+        internal XamGridCellDriver(XamGridDriver grid, AppVar cellData)
+            : base((AppVar)cellData.Dynamic().Control)
         {
             Grid = grid;
+            CellData = cellData;
         }
 
         public void EmulateActivate()
         {
-            Static.EmulateActivate(Grid, this);
+            Static.EmulateActivate(Grid, CellData);
         }
 
         public void EmulateActivate(Async async)
         {
-            Static.EmulateActivate(Grid, this, async);
+            Static.EmulateActivate(Grid, CellData, async);
         }
 
-        protected static void EmulateActivate(dynamic grid, dynamic cell)
+        protected static void EmulateActivate(dynamic grid, dynamic cellData)
         {
             grid.Focus();
-            grid.ActiveCell = cell;
-        }
-
-        protected static void ScrollCellIntoView(dynamic grid, dynamic cell)
-        {
-            grid.ScrollCellIntoView(cell);
-            InvokeUtility.DoEvents();
+            grid.ActiveCell = cellData;
         }
     }
 }
