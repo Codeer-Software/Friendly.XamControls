@@ -11,16 +11,16 @@ namespace Friendly.XamControls
         public bool? IsChecked { get { return Control.IdentifyByType<CheckBox>().IsChecked; } }
 
         public XamGridCheckCellDriver(XamGridCellDriver cell)
-            : base(cell.XamGrid, cell.AppVar) { }
+            : base(cell.Grid, cell.AppVar) { }
 
         public void EmulateEdit(bool? check)
         {
-            Static.EmulateEdit(XamGrid, this, check);
+            Static.EmulateEdit(Grid, this, check);
         }
 
         public void EmulateEdit(bool? check, Async async)
         {
-            Static.EmulateEdit(XamGrid, this, check, async);
+            Static.EmulateEdit(Grid, this, check, async);
         }
 
         static void EmulateEdit(dynamic grid, dynamic cell, bool? check)

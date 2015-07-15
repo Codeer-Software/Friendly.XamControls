@@ -11,7 +11,7 @@ namespace Friendly.XamControls
         public bool? IsChecked { get { return Control.IdentifyByType("Infragistics.Windows.Editors.XamCheckEditor").IsChecked; } }
 
         public XamDataGridCheckCellDriver(XamDataGridCellDriver cell)
-            : base((AppVar)cell.Grid, cell.AppVar) { }
+            : base(cell.Grid, cell.AppVar) { }
 
         public void EmulateEdit(bool? check)
         {

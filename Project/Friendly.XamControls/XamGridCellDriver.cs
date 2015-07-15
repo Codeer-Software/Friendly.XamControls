@@ -9,26 +9,26 @@ namespace Friendly.XamControls
 {
     public class XamGridCellDriver : XamControlBase
     {
-        public AppVar XamGrid { get; private set; }
+        public XamGridDriver Grid { get; private set; }
 
         public bool IsActive { get { return This.IsActive; } }
 
         protected AppVar Control { get { return This.Control; } }
 
-        internal XamGridCellDriver(AppVar grid, AppVar cell)
+        internal XamGridCellDriver(XamGridDriver grid, AppVar cell)
             : base(cell)
         {
-            XamGrid = grid;
+            Grid = grid;
         }
 
         public void EmulateActivate()
         {
-            Static.EmulateActivate(XamGrid, this);
+            Static.EmulateActivate(Grid, this);
         }
 
         public void EmulateActivate(Async async)
         {
-            Static.EmulateActivate(XamGrid, this, async);
+            Static.EmulateActivate(Grid, this, async);
         }
 
         protected static void EmulateActivate(dynamic grid, dynamic cell)

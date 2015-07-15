@@ -19,6 +19,26 @@ namespace XamApp
             DataContext = this;
         }
 
+        void ConnectActiveNodeChanged()
+        {
+            _tree.ActiveNodeChanged += delegate { MessageBox.Show(""); };
+        }
+
+        void ConnectNodeCheckedChanged()
+        {
+            _tree.NodeCheckedChanged += delegate { MessageBox.Show(""); };
+        }
+
+        void ConnectNodeExpansionChanged()
+        {
+            _tree.NodeExpansionChanged += delegate { MessageBox.Show(""); };
+        }
+
+        void ConnectNodeExitedEditMode()
+        {
+            _tree.NodeExitingEditMode += delegate { MessageBox.Show(""); };
+        }
+
         public List<Data> Children { get; set; }
 
         public class Data

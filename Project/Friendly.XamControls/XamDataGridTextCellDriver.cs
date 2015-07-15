@@ -11,7 +11,7 @@ namespace Friendly.XamControls
         public string Text { get { return Control.IdentifyByType("Infragistics.Windows.Editors.XamTextEditor").Text; } }
 
         public XamDataGridTextCellDriver(XamDataGridCellDriver cell)
-            : base((AppVar)cell.Grid, cell.AppVar) { }
+            : base(cell.Grid, cell.AppVar) { }
 
         public void EmulateEdit(string text)
         {

@@ -11,16 +11,16 @@ namespace Friendly.XamControls
         public string Text { get { return Control.IdentifyByType<TextBlock>().Text; } }
 
         public XamGridTextCellDriver(XamGridCellDriver cell)
-            : base(cell.XamGrid, cell.AppVar) { }
+            : base(cell.Grid, cell.AppVar) { }
 
         public void EmulateEdit(string text)
         {
-            Static.EmulateEdit(XamGrid, this, text);
+            Static.EmulateEdit(Grid, this, text);
         }
 
         public void EmulateEdit(string text, Async async)
         {
-            Static.EmulateEdit(XamGrid, this, text, async);
+            Static.EmulateEdit(Grid, this, text, async);
         }
 
         static void EmulateEdit(dynamic grid, dynamic cell, string text)

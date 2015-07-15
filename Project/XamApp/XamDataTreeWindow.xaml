@@ -6,9 +6,15 @@
     <Grid>
 
         <ig:XamDataTree x:Name="_tree" ItemsSource="{Binding Children}">
+            <ig:XamDataTree.CheckBoxSettings>
+                <ig:CheckBoxSettings CheckBoxMode="Manual" CheckBoxVisibility="Visible"/>
+            </ig:XamDataTree.CheckBoxSettings>
+            <ig:XamDataTree.EditingSettings>
+                <ig:TreeEditingSettings AllowEditing="True"/>
+            </ig:XamDataTree.EditingSettings>
             <ig:XamDataTree.GlobalNodeLayouts>
                 <ig:NodeLayout Key="Name"
-                               TargetTypeName="TreeData"
+                               TargetTypeName="Data"
                                DisplayMemberPath="Name" />
             </ig:XamDataTree.GlobalNodeLayouts>
         </ig:XamDataTree>

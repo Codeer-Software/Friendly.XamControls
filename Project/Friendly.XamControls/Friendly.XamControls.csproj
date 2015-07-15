@@ -58,6 +58,8 @@
     <Compile Include="Inside\Initializer.cs" />
     <Compile Include="XamDataGridCellDriver.cs" />
     <Compile Include="XamDataGridDriver.cs" />
+    <Compile Include="XamDataTreeDriver.cs" />
+    <Compile Include="XamDataTreeNodeDriver.cs" />
     <Compile Include="XamGridCellDriver.cs" />
     <Compile Include="XamDataGridCheckCellDriver.cs" />
     <Compile Include="XamGridCheckCellDriver.cs" />

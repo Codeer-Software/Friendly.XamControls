@@ -13,7 +13,7 @@ namespace Friendly.XamControls
         public int SelectedIndex { get { return Control.IdentifyByType("Infragistics.Windows.Editors.XamComboEditor").SelectedIndex; } }
 
         public XamDataGridComboCellDriver(XamDataGridCellDriver cell)
-            : base((AppVar)cell.Grid, cell.AppVar) { }
+            : base(cell.Grid, cell.AppVar) { }
 
         public void EmulateEdit(int index)
         {

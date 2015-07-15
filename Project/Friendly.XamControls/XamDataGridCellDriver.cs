@@ -9,7 +9,7 @@ namespace Friendly.XamControls
 {
     public class XamDataGridCellDriver : XamControlBase
     {
-        public dynamic Grid { get; private set; }
+        public XamDataGridDriver Grid { get; private set; }
 
         public bool IsActive { get { return This.IsActive; } }
 
@@ -17,14 +17,15 @@ namespace Friendly.XamControls
         {
             get
             {
-                Grid.BringRecordIntoView(This.Record);
+                Grid.Dynamic().BringRecordIntoView(This.Record);
                 return App.Type().Infragistics.Windows.DataPresenter.CellValuePresenter.FromCell(AppVar);
             }
         }
 
-        internal XamDataGridCellDriver(AppVar grid, AppVar cell) : base (cell) 
+        internal XamDataGridCellDriver(XamDataGridDriver grid, AppVar cell)
+            : base(cell) 
         {
-            Grid = grid.Dynamic();
+            Grid = grid;
         }
 
         public void EmulateActivate()

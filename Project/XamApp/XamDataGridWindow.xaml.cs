@@ -19,10 +19,6 @@ namespace XamApp
                 GridData.Add(new Data() { Text = "t" + i, Combo = "a", Check = true });
             }
             DataContext = this;
-
-            /*
-            Infragistics.Windows.Editors.XamTextEditor e;
-            e.Text*/
         }
 
         void ConnectActiveCellChanged()
