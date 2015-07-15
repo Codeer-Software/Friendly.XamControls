@@ -23,15 +23,15 @@ namespace Friendly.XamControls
             Static.EmulateEdit(Control, text, async);
         }
 
-        static void EmulateEdit(dynamic cell, string text)
+        static void EmulateEdit(dynamic control, string text)
         {
-            EmulateActivate(cell);
-            cell.StartEditMode();
+            EmulateActivate(control);
+            control.StartEditMode();
             InvokeUtility.DoEvents();
-            DependencyObject ctrl = cell;
+            DependencyObject ctrl = control;
             dynamic textBox = ctrl.VisualTree().ByType("Infragistics.Windows.Editors.XamTextEditor").Single();
             textBox.Text = text;
-            cell.EndEditMode(true, false);
+            control.EndEditMode(true, false);
         }
     }
 

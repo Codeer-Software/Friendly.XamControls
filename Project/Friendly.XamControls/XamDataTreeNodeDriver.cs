@@ -15,7 +15,7 @@ namespace Friendly.XamControls
         {
             get 
             {
-                Tree.ScrollNodeIntoView(this);
+                Static.ScrollNodeIntoView(Tree, this);
                 return This.Control; 
             }
         }
@@ -46,8 +46,7 @@ namespace Friendly.XamControls
 
         protected static void EmulateActivate(dynamic tree, dynamic node)
         {
-            tree.ScrollNodeIntoView(node);
-            InvokeUtility.DoEvents();
+            ScrollNodeIntoView(tree, node);
             node.IsActive = true;
         }
 
@@ -63,95 +62,15 @@ namespace Friendly.XamControls
 
         static void EmulateChangeExpanded(dynamic tree, dynamic node, bool isExpanded)
         {
-            tree.ScrollNodeIntoView(node);
+            ScrollNodeIntoView(tree, node);
             InvokeUtility.DoEvents();
             node.IsExpanded = isExpanded;
         }
-    }
 
-
-
-    public class XamDataTreeTextNodeDriver : XamDataTreeNodeDriver
-    {
-        public string Text { get { return Control.IdentifyByType<TextBlock>().Text; } }
-
-        public XamDataTreeTextNodeDriver(XamDataTreeNodeDriver node)
-            : base((AppVar)node.Tree, node.AppVar) { }
-
-        public void EmulateEdit(string text)
+        static void ScrollNodeIntoView(dynamic tree, dynamic node)
         {
-            Static.EmulateEdit(Tree, this, text);
-        }
-
-        public void EmulateEdit(string text, Async async)
-        {
-            Static.EmulateEdit(Tree, this, text, async);
-        }
-
-        static void EmulateEdit(dynamic tree, dynamic node, string text)
-        {
-            EmulateActivate(tree, node);
-            tree.EnterEditMode(node);
+            tree.ScrollNodeIntoView(node);
             InvokeUtility.DoEvents();
-            DependencyObject ctrl = node.Control;
-            dynamic textBox = ctrl.VisualTree().ByType<TextBox>().Single();
-            textBox.Text = text;
-            tree.ExitEditMode(false);
         }
     }
-
-    public static class XamDataTreeTextNodeDriverExtensions
-    {
-        public static XamDataTreeTextNodeDriver AsText(this XamDataTreeNodeDriver node)
-        {
-            return new XamDataTreeTextNodeDriver(node);
-        }
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-    public class XamDataTreeCheckNodeDriver : XamDataTreeNodeDriver
-    {
-        public bool? IsChecked { get { return Control.IdentifyByType<CheckBox>().IsChecked; } }
-
-        public XamDataTreeCheckNodeDriver(XamDataTreeNodeDriver node)
-            : base((AppVar)node.Tree, node.AppVar) { }
-
-        public void EmulateEdit(bool? check)
-        {
-            Static.EmulateEdit(Tree, this, check);
-        }
-
-        public void EmulateEdit(bool? check, Async async)
-        {
-            Static.EmulateEdit(Tree, this, check, async);
-        }
-
-        static void EmulateEdit(dynamic tree, dynamic node, bool? check)
-        {
-            EmulateActivate(tree, node);
-            DependencyObject ctrl = node.Control;
-            dynamic checkBox = ctrl.VisualTree().ByType<CheckBox>().Single();
-            checkBox.IsChecked = check;
-        }
-    }
-
-    public static class XamDataTreeCheckNodeDriverExtensions
-    {
-        public static XamDataTreeCheckNodeDriver AsCheck(this XamDataTreeNodeDriver node)
-        {
-            return new XamDataTreeCheckNodeDriver(node);
-        }
-    }
-
 }

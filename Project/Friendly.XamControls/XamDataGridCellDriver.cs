@@ -18,6 +18,7 @@ namespace Friendly.XamControls
             get
             {
                 Grid.Dynamic().BringRecordIntoView(This.Record);
+                App.Type(typeof(InvokeUtility)).DoEvents();
                 return App.Type().Infragistics.Windows.DataPresenter.CellValuePresenter.FromCell(AppVar);
             }
         }
@@ -38,10 +39,10 @@ namespace Friendly.XamControls
             Static.EmulateActivate(Control, async);
         }
 
-        protected static void EmulateActivate(dynamic cell)
+        protected static void EmulateActivate(dynamic control)
         {
-            cell.Focus();
-            cell.IsActive = true;
+            control.Focus();
+            control.IsActive = true;
         }
     }
 }

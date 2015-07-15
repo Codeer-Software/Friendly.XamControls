@@ -25,15 +25,15 @@ namespace Friendly.XamControls
             Static.EmulateEdit(Control, index, async);
         }
 
-        static void EmulateEdit(dynamic cell, int index)
+        static void EmulateEdit(dynamic control, int index)
         {
-            EmulateActivate(cell);
-            cell.StartEditMode();
+            EmulateActivate(control);
+            control.StartEditMode();
             InvokeUtility.DoEvents();
-            DependencyObject ctrl = cell;
+            DependencyObject ctrl = control;
             dynamic comboBox = ctrl.VisualTree().ByType("Infragistics.Windows.Editors.XamComboEditor").Single();
             comboBox.SelectedIndex = index;
-            cell.EndEditMode(true, false);
+            control.EndEditMode(true, false);
         }
 
         public void EmulateEdit(string text)

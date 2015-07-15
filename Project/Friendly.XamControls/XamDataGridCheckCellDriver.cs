@@ -23,15 +23,15 @@ namespace Friendly.XamControls
             Static.EmulateEdit(Control, check, async);
         }
 
-        static void EmulateEdit(dynamic cell, bool? check)
+        static void EmulateEdit(dynamic control, bool? check)
         {
-            EmulateActivate(cell);
-            cell.StartEditMode();
+            EmulateActivate(control);
+            control.StartEditMode();
             InvokeUtility.DoEvents();
-            DependencyObject ctrl = cell;
+            DependencyObject ctrl = control;
             dynamic checkBox = ctrl.VisualTree().ByType("Infragistics.Windows.Editors.XamCheckEditor").Single();
             checkBox.IsChecked = check;
-            cell.EndEditMode(true, false);
+            control.EndEditMode(true, false);
         }
     }
 

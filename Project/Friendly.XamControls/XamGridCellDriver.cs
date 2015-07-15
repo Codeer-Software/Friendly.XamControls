@@ -13,7 +13,14 @@ namespace Friendly.XamControls
 
         public bool IsActive { get { return This.IsActive; } }
 
-        protected AppVar Control { get { return This.Control; } }
+        protected AppVar Control
+        {
+            get
+            {
+                Static.ScrollCellIntoView(Grid, this);
+                return This.Control;
+            }
+        }
 
         internal XamGridCellDriver(XamGridDriver grid, AppVar cell)
             : base(cell)
@@ -35,7 +42,12 @@ namespace Friendly.XamControls
         {
             grid.Focus();
             grid.ActiveCell = cell;
+        }
+
+        protected static void ScrollCellIntoView(dynamic grid, dynamic cell)
+        {
             grid.ScrollCellIntoView(cell);
+            InvokeUtility.DoEvents();
         }
     }
 }
