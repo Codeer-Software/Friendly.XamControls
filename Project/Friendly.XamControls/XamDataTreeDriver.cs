@@ -10,7 +10,15 @@ namespace Friendly.XamControls
 
         public XamDataTreeNodeDriver GetNode(int index)
         {
-            return new XamDataTreeNodeDriver(AppVar, This.Nodes[index]);
+            var node = This.Nodes[index];
+            Static.ScrollNodeIntoView(this, node);
+            return new XamDataTreeNodeDriver(this, node);
+        }
+
+        static void ScrollNodeIntoView(dynamic tree, dynamic node)
+        {
+            tree.ScrollNodeIntoView(node);
+            InvokeUtility.DoEvents();
         }
     }
 }

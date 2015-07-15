@@ -9,19 +9,19 @@ namespace Friendly.XamControls
 {
     public class XamDataTreeTextNodeDriver : XamDataTreeNodeDriver
     {
-        public string Text { get { return Control.IdentifyByType<TextBlock>().Text; } }
+        public string Text { get { return AppVar.IdentifyByType<TextBlock>().Text; } }
 
         public XamDataTreeTextNodeDriver(XamDataTreeNodeDriver node)
-            : base((AppVar)node.Tree, node.AppVar) { }
+            : base(node.Tree, node.NodeData) { }
 
         public void EmulateEdit(string text)
         {
-            Static.EmulateEdit(Tree, this, text);
+            Static.EmulateEdit(Tree, NodeData, text);
         }
 
         public void EmulateEdit(string text, Async async)
         {
-            Static.EmulateEdit(Tree, this, text, async);
+            Static.EmulateEdit(Tree, NodeData, text, async);
         }
 
         static void EmulateEdit(dynamic tree, dynamic node, string text)

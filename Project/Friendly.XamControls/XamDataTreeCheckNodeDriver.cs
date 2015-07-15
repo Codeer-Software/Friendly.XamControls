@@ -9,19 +9,19 @@ namespace Friendly.XamControls
 {
     public class XamDataTreeCheckNodeDriver : XamDataTreeNodeDriver
     {
-        public bool? IsChecked { get { return Control.IdentifyByType<CheckBox>().IsChecked; } }
+        public bool? IsChecked { get { return AppVar.IdentifyByType<CheckBox>().IsChecked; } }
 
         public XamDataTreeCheckNodeDriver(XamDataTreeNodeDriver node)
-            : base((AppVar)node.Tree, node.AppVar) { }
+            : base(node.Tree, node.NodeData) { }
 
         public void EmulateEdit(bool? check)
         {
-            Static.EmulateEdit(Tree, this, check);
+            Static.EmulateEdit(Tree, NodeData, check);
         }
 
         public void EmulateEdit(bool? check, Async async)
         {
-            Static.EmulateEdit(Tree, this, check, async);
+            Static.EmulateEdit(Tree, NodeData, check, async);
         }
 
         static void EmulateEdit(dynamic tree, dynamic node, bool? check)
