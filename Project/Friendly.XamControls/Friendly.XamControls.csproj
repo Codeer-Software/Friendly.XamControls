@@ -72,6 +72,8 @@
     <Compile Include="XamDataGridTextCellDriver.cs" />
     <Compile Include="XamGridTextCellDriver.cs" />
     <Compile Include="XamOutlookBarDriver.cs" />
+    <Compile Include="XamTabControlDriver.cs" />
+    <Compile Include="XamTabItemDriver.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

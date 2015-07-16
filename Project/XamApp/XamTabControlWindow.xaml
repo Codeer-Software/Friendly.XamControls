@@ -5,22 +5,6 @@
         Title="XamTabControlWindow" Height="300" Width="300">
     <Grid>
 
-        <Custom:XamTabControl>
-            <Custom:TabItemEx Header="tab0">
-                <Grid>
-                    <TextBlock Text="0"/>
-                </Grid>
-            </Custom:TabItemEx>
-            <Custom:TabItemEx Header="tab1">
-                <Grid>
-                    <TextBlock Text="1"/>
-                </Grid>
-            </Custom:TabItemEx>
-            <Custom:TabItemEx Header="tab2">
-                <Grid>
-                    <TextBlock Text="2"/>
-                </Grid>
-            </Custom:TabItemEx>
-        </Custom:XamTabControl>
+        <Custom:XamTabControl x:Name="_tab" TabItemCloseButtonVisibility="Visible"/>
     </Grid>
 </Window>
