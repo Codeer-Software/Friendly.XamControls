@@ -22,7 +22,7 @@ namespace Test
         [TestInitialize]
         public void TestInitialize()
         {
-            _app = new WindowsAppFriend(Process.Start("XamApp.exe"));
+            _app = new WindowsAppFriend(Process.Start(Target.Path));
             var main = WindowControl.FromZTop(_app);
             var a = new Async();
             new WPFButtonBase(main.Dynamic()._buttonXamTabControl).EmulateClick(a);

@@ -90,6 +90,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Target.cs" />
     <Compile Include="XamApplicationMenu2010Driver.cs" />
     <Compile Include="XamCalendarTest.cs" />
     <Compile Include="XamDataGridTest.cs" />
@@ -107,10 +108,6 @@
     <ProjectReference Include="..\Friendly.XamControls\Friendly.XamControls.csproj">
       <Project>{3a47b26c-2a80-4e82-837b-f1dcbec9b02d}</Project>
       <Name>Friendly.XamControls</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\XamApp\XamApp.csproj">
-      <Project>{40f50649-99a6-4a3c-8cbd-3be78b7b4d57}</Project>
-      <Name>XamApp</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

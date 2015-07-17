@@ -10,7 +10,6 @@ namespace Friendly.XamControls
 
         internal XamOutlookBarGroupDriver(AppVar src) : base(src) { }
 
-
         public void EmulateSelect()
         {
             Static.EmulateSelect(this);

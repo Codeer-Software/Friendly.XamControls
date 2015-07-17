@@ -9,6 +9,7 @@ using RM.Friendly.WPFStandardControls;
 using Codeer.Friendly.Windows.Grasp;
 using Friendly.XamControls;
 using Codeer.Friendly.Windows.NativeStandardControls;
+
 namespace Test
 {
     [TestClass]
@@ -21,7 +22,7 @@ namespace Test
         [TestInitialize]
         public void TestInitialize()
         {
-            _app = new WindowsAppFriend(Process.Start("XamApp.exe"));
+            _app = new WindowsAppFriend(Process.Start(Target.Path));
             var main = WindowControl.FromZTop(_app);
             var a = new Async();
             new WPFButtonBase(main.Dynamic()._buttonXamCalendar).EmulateClick(a);
