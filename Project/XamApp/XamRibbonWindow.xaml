@@ -4,7 +4,7 @@
         xmlns:Custom="http://infragistics.com/Ribbon" x:Class="XamApp.XamRibbonWindow"
         Title="XamRibbonWindow" Height="300" Width="300">
     <Grid>
-        <Custom:XamRibbon Height="144" VerticalAlignment="Top" ApplicationMenuMode="Office2010" Theme="Office2013">
+        <Custom:XamRibbon x:Name="_ribbon" Height="144" VerticalAlignment="Top" ApplicationMenuMode="Office2010" Theme="Office2013">
             <Custom:XamRibbon.ApplicationMenu2010>
                 <Custom:ApplicationMenu2010 Caption="File">
                     <Custom:ApplicationMenu2010.Items>
@@ -20,8 +20,8 @@
                                 <TextBlock Text="Text in the first tab content" />
                             </Custom:ApplicationMenu2010Item.Content>
                         </Custom:ApplicationMenu2010Item>
-                        
-                        <Custom:ApplicationMenu2010Item Header="Tab 2">
+
+                        <Custom:ApplicationMenu2010Item  x:Name="_item2000_2" Header="Tab 2">
                             <Custom:ApplicationMenu2010Item.Content>
                                 <TextBlock Text="Text in the second tab content" />
                             </Custom:ApplicationMenu2010Item.Content>

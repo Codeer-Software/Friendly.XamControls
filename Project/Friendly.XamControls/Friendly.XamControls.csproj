@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="Inside\InvokeUtility.cs" />
     <Compile Include="Inside\XamControlBase.cs" />
+    <Compile Include="XamApplicationMenu2010Driver.cs" />
     <Compile Include="XamCalendarDriver.cs" />
     <Compile Include="XamOutlookBarGroupDriver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -73,6 +74,7 @@
     <Compile Include="XamDataGridTextCellDriver.cs" />
     <Compile Include="XamGridTextCellDriver.cs" />
     <Compile Include="XamOutlookBarDriver.cs" />
+    <Compile Include="XamRibbonDriver.cs" />
     <Compile Include="XamTabControlDriver.cs" />
     <Compile Include="XamTabItemDriver.cs" />
   </ItemGroup>

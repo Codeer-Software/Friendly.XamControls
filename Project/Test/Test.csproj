@@ -90,11 +90,13 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="XamApplicationMenu2010Driver.cs" />
     <Compile Include="XamCalendarTest.cs" />
     <Compile Include="XamDataGridTest.cs" />
     <Compile Include="XamDataTreeTest.cs" />
     <Compile Include="XamGridTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XamRibbonTest.cs" />
     <Compile Include="XamTabControlTest.cs" />
     <Compile Include="XamOutlookBarTest.cs" />
   </ItemGroup>
