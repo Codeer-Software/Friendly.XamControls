@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="Inside\InvokeUtility.cs" />
     <Compile Include="Inside\XamControlBase.cs" />
+    <Compile Include="XamCalendarDriver.cs" />
     <Compile Include="XamOutlookBarGroupDriver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Inside\SearcherInTarget.cs" />

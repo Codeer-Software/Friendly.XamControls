@@ -8,5 +8,10 @@ namespace XamApp
         {
             InitializeComponent();
         }
+
+        void ConnectSelectedDatesChanged()
+        {
+            _calendar.SelectedDatesChanged += delegate { MessageBox.Show(""); };
+        }
     }
 }

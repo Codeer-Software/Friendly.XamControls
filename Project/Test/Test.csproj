@@ -90,6 +90,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="XamCalendarTest.cs" />
     <Compile Include="XamDataGridTest.cs" />
     <Compile Include="XamDataTreeTest.cs" />
     <Compile Include="XamGridTest.cs" />
