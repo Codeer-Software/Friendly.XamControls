@@ -61,19 +61,16 @@ https://www.nuget.org/packages/Codeer.Friendly.Windows.NativeStandardControls/
 * For WinForms.  
 https://www.nuget.org/packages/Ong.Friendly.FormsStandardControls/  
 
-* For WPF.
+* For WPF.  
 https://www.nuget.org/packages/RM.Friendly.WPFStandardControls/  
 
 * For getting the target window.  
 https://www.nuget.org/packages/Codeer.Friendly.Windows.Grasp/  
 
-* For 3d party.
-
-https://www.nuget.org/packages/Friendly.XamControls/
-
-https://www.nuget.org/packages/Friendly.C1.Win/
-
-https://www.nuget.org/packages/Friendly.FarPoint/
+* For 3d party.  
+https://www.nuget.org/packages/Friendly.XamControls/  
+https://www.nuget.org/packages/Friendly.C1.Win/  
+https://www.nuget.org/packages/Friendly.FarPoint/  
 
 ============================
 If you use PinInterface, you map control simple.  
