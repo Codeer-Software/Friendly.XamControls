@@ -73,5 +73,6 @@ https://www.nuget.org/packages/Friendly.C1.Win/
 https://www.nuget.org/packages/Friendly.FarPoint/
 ============================
 If you use PinInterface, you map control simple.  
+
 https://www.nuget.org/packages/VSHTC.Friendly.PinInterface/
 
