@@ -39,6 +39,7 @@
   <ItemGroup>
     <Reference Include="C1.WPF.4, Version=4.0.20143.440, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL" />
     <Reference Include="InfragisticsWPF4.Controls.Editors.XamCalendar.v14.2, Version=14.2.20142.2081, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="InfragisticsWPF4.Controls.Editors.XamComboEditor.v14.2, Version=14.2.20142.2081, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
     <Reference Include="InfragisticsWPF4.Controls.Grids.XamGrid.v14.2, Version=14.2.20142.2081, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Infragistics\2014.2\WPF\CLR4.0\Bin\InfragisticsWPF4.Controls.Grids.XamGrid.v14.2.dll</HintPath>
@@ -86,6 +87,9 @@
     <Compile Include="XamDataTreeWindow.xaml.cs">
       <DependentUpon>XamDataTreeWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="XamEditorsWindow.xaml.cs">
+      <DependentUpon>XamEditorsWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="XamGridWindow.xaml.cs">
       <DependentUpon>XamGridWindow.xaml</DependentUpon>
     </Compile>
@@ -119,6 +123,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="XamDataTreeWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="XamEditorsWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

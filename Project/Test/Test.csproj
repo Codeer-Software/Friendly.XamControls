@@ -92,6 +92,7 @@
   <ItemGroup>
     <Compile Include="Target.cs" />
     <Compile Include="XamApplicationMenu2010Driver.cs" />
+    <Compile Include="XamEditorsTest.cs" />
     <Compile Include="XamCalendarTest.cs" />
     <Compile Include="XamDataGridTest.cs" />
     <Compile Include="XamDataTreeTest.cs" />

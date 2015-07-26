@@ -5,3 +5,4 @@ Infragistics.Controls.Menus.XamDataTree, InfragisticsWPF4.Controls.Menus.XamData
 Infragistics.Windows.OutlookBar.XamOutlookBar, InfragisticsWPF4.OutlookBar.v14.2, Version=14.2.20142.2081, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb
 Infragistics.Controls.Editors.XamCalendar, InfragisticsWPF4.Controls.Editors.XamCalendar.v14.2, Version=14.2.20142.2081, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb
 Infragistics.Windows.Controls.XamTabControl, InfragisticsWPF4.v14.2, Version=14.2.20142.2081, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb
+Infragistics.Controls.Editors.XamComboEditor, InfragisticsWPF4.Controls.Editors.XamComboEditor.v14.2, Version=14.2.20142.2081, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb

@@ -34,13 +34,16 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Codeer.Friendly">
+    <Reference Include="Codeer.Friendly, Version=2.5.0.0, Culture=neutral, PublicKeyToken=6c44da6fca38aa86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Codeer.Friendly.2.5.0\lib\net40\Codeer.Friendly.dll</HintPath>
     </Reference>
-    <Reference Include="Codeer.Friendly.Dynamic">
+    <Reference Include="Codeer.Friendly.Dynamic, Version=2.5.0.0, Culture=neutral, PublicKeyToken=376bc779077733e8, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Codeer.Friendly.2.5.0\lib\net40\Codeer.Friendly.Dynamic.dll</HintPath>
     </Reference>
-    <Reference Include="Codeer.Friendly.Windows">
+    <Reference Include="Codeer.Friendly.Windows, Version=2.6.0.0, Culture=neutral, PublicKeyToken=532f270f1da385b3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Codeer.Friendly.Windows.2.6.0\lib\net20\Codeer.Friendly.Windows.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
@@ -55,6 +58,7 @@
     <Compile Include="Inside\XamControlBase.cs" />
     <Compile Include="XamApplicationMenu2010Driver.cs" />
     <Compile Include="XamCalendarDriver.cs" />
+    <Compile Include="XamComboEditorDriver.cs" />
     <Compile Include="XamOutlookBarGroupDriver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Inside\SearcherInTarget.cs" />
