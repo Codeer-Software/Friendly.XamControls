@@ -1,5 +1,6 @@
 ﻿using Infragistics.Windows.DataPresenter;
 using Infragistics.Windows.Editors;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Windows;
@@ -44,6 +45,10 @@ namespace XamApp
             public string Text { get; set; }
             public string Combo { get; set; }
             public bool Check { get; set; }
+            public DateTime DateTime { get; set; }
+            public decimal Currency { get; set; }
+            public int Numeric { get; set; }
+            public string Masked { get; set; }
         }
     }
 }

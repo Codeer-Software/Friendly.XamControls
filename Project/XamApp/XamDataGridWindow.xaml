@@ -41,7 +41,34 @@
                                     EditorType="{x:Type igEditors:XamCheckEditor }"/>
                             </igDP:Field.Settings>
                         </igDP:Field>
+
+                        <igDP:Field Name="DateTime" Label="DateTime" >
+                            <igDP:Field.Settings>
+                                <igDP:FieldSettings 
+                                    EditorType="{x:Type igEditors:XamDateTimeEditor }"/>
+                            </igDP:Field.Settings>
+                        </igDP:Field>
+
+                        <igDP:Field Name="Currency" Label="Currency" >
+                            <igDP:Field.Settings>
+                                <igDP:FieldSettings 
+                                    EditorType="{x:Type igEditors:XamCurrencyEditor }"/>
+                            </igDP:Field.Settings>
+                        </igDP:Field>
                         
+                        <igDP:Field Name="Numeric" Label="Numeric" >
+                            <igDP:Field.Settings>
+                                <igDP:FieldSettings 
+                                    EditorType="{x:Type igEditors:XamNumericEditor }"/>
+                            </igDP:Field.Settings>
+                        </igDP:Field>
+                        
+                        <igDP:Field Name="Masked" Label="Masked" >
+                            <igDP:Field.Settings>
+                                <igDP:FieldSettings 
+                                    EditorType="{x:Type igEditors:XamMaskedEditor }"/>
+                            </igDP:Field.Settings>
+                        </igDP:Field>
                     </igDP:FieldLayout.Fields>
                 </igDP:FieldLayout>
             </igDP:XamDataGrid.FieldLayouts>

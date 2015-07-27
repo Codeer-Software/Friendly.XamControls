@@ -126,5 +126,77 @@ namespace Test
             new NativeMessageBox(_dlg.WaitForNextModal()).EmulateButtonClick("OK");
             cell.IsChecked.Is(false);
         }
+
+        [TestMethod]
+        public void TestEmulateEditDateTime()
+        {
+            var cell = _grid.GetCell(99, 3).AsDateTime();
+            cell.EmulateEdit("2015年01月02日");
+            cell.Text.Is("2015年01月02日");
+        }
+
+        [TestMethod]
+        public void TestEmulateEditDateTimeAsync()
+        {
+            _dlg.Dynamic().ConnectCellExitedEditMode();
+            var cell = _grid.GetCell(99, 3).AsDateTime();
+            cell.EmulateEdit("2015年01月02日", new Async());
+            new NativeMessageBox(_dlg.WaitForNextModal()).EmulateButtonClick("OK");
+            cell.Text.Is("2015年01月02日");
+        }
+
+        [TestMethod]
+        public void TestEmulateEditCurrency()
+        {
+            var cell = _grid.GetCell(99, 4).AsCurrency();
+            cell.EmulateEdit("123");
+            cell.Text.Is((char)0xa5 + "123");
+        }
+
+        [TestMethod]
+        public void TestEmulateEditCurrencyAsync()
+        {
+            _dlg.Dynamic().ConnectCellExitedEditMode();
+            var cell = _grid.GetCell(99, 4).AsCurrency();
+            cell.EmulateEdit("123", new Async());
+            new NativeMessageBox(_dlg.WaitForNextModal()).EmulateButtonClick("OK");
+            cell.Text.Is((char)0xa5 + "123");
+        }
+
+        [TestMethod]
+        public void TestEmulateEditNumeric()
+        {
+            var cell = _grid.GetCell(99, 5).AsNumeric();
+            cell.EmulateEdit("123");
+            cell.Text.Is("123");
+        }
+
+        [TestMethod]
+        public void TestEmulateEditNumericAsync()
+        {
+            _dlg.Dynamic().ConnectCellExitedEditMode();
+            var cell = _grid.GetCell(99, 5).AsNumeric();
+            cell.EmulateEdit("123", new Async());
+            new NativeMessageBox(_dlg.WaitForNextModal()).EmulateButtonClick("OK");
+            cell.Text.Is("123");
+        }
+
+        [TestMethod]
+        public void TestEmulateEditMasked()
+        {
+            var cell = _grid.GetCell(99, 6).AsMasked();
+            cell.EmulateEdit("abc");
+            cell.Text.Is("abc");
+        }
+
+        [TestMethod]
+        public void TestEmulateEditMaskedAsync()
+        {
+            _dlg.Dynamic().ConnectCellExitedEditMode();
+            var cell = _grid.GetCell(99, 6).AsMasked();
+            cell.EmulateEdit("abc", new Async());
+            new NativeMessageBox(_dlg.WaitForNextModal()).EmulateButtonClick("OK");
+            cell.Text.Is("abc");
+        }
     }
 }
