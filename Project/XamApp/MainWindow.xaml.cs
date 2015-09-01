@@ -50,10 +50,16 @@ namespace XamApp
             var dlg = new XamTabControlWindow();
             dlg.ShowDialog();
         }
-
+        
         void ButtonXamEditorsClick(object sender, RoutedEventArgs e)
         {
             var dlg = new XamEditorsWindow();
+            dlg.ShowDialog();
+        }
+
+        void ButtonXamDockManagerClick(object sender, RoutedEventArgs e)
+        {
+            var dlg = new XamDockManagerWindow();
             dlg.ShowDialog();
         }
     }

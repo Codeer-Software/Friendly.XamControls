@@ -1,0 +1,16 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Custom="http://infragistics.com/DockManager" xmlns:ig="http://schemas.infragistics.com/xaml" x:Class="XamApp.XamDockManagerWindow"
+        Title="XamDockManagerWindow" Height="300" Width="300">
+    <Grid>
+        <Custom:XamDockManager x:Name="_dock" Content="XamDockManager">
+            <Custom:XamDockManager.Panes>
+                <Custom:SplitPane SplitterOrientation="Horizontal" Custom:XamDockManager.InitialLocation="DockedLeft">
+                    <Custom:ContentPane Header="Pane1"/>
+                    <Custom:ContentPane Header="Pane2"/>
+                </Custom:SplitPane>
+            </Custom:XamDockManager.Panes>
+        </Custom:XamDockManager>
+    </Grid>
+</Window>

@@ -1,6 +1,8 @@
 ﻿using Codeer.Friendly;
 using Codeer.Friendly.Dynamic;
 using Friendly.XamControls.Inside;
+using System.Windows.Automation.Peers;
+using System.Windows.Automation.Provider;
 
 namespace Friendly.XamControls
 {
@@ -11,6 +13,11 @@ namespace Friendly.XamControls
         public bool IsOpen { get { return This.IsOpen; } }
 
         internal XamApplicationMenu2010Driver(AppVar src) : base(src) { }
+
+        public XamApplicationMenu2010ItemDriver GetItem(int index)
+        {
+            return new XamApplicationMenu2010ItemDriver(This.Items[index]);
+        }
 
         public void EmulateOpen()
         {
@@ -64,6 +71,26 @@ namespace Friendly.XamControls
                 }
             }
             return -1;
+        }
+    }
+
+    public class XamApplicationMenu2010ItemDriver : XamControlBase
+    {
+        public AppVar Header { get { return This.Header; } }
+
+        public string HeaderText { get { return AppVar.IsNull ? string.Empty : Header.ToString(); } }
+
+        internal XamApplicationMenu2010ItemDriver(AppVar src) : base(src) { }
+
+        public void EmulateClick()
+        {
+            Static.EmulateClick(this, This.OnCreateAutomationPeer());
+        }
+
+        static void EmulateClick(dynamic item, AutomationPeer peer)
+        {
+            item.Focus();
+            ((IInvokeProvider)peer).Invoke();
         }
     }
 }

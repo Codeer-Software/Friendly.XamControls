@@ -103,6 +103,20 @@ namespace Test
             menu.SelectedTabIndex.Is(1);
             menu.EmulateSelectTab(2);
             menu.SelectedTabIndex.Is(2);
+
+            //TODO async test
+        }
+
+        [TestMethod]
+        public void ApplicationMenu2010ItemClick()
+        {
+            var menu = _ribbon.ApplicationMenu2010;
+            menu.EmulateOpen();
+            menu.SelectedTabIndex.Is(1);
+            menu.GetItem(2).EmulateClick();
+            menu.SelectedTabIndex.Is(2);
+
+            //TODO async test
         }
     }
 }

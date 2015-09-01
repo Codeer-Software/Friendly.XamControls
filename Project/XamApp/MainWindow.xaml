@@ -22,5 +22,6 @@
         <Button x:Name="_buttonXamCalendar" Content="XamCalendar" Grid.Row="1" Grid.Column="2" Click="ButtonXamCalendarClick"/>
         <Button x:Name="_buttonXamTabControl" Content="XamTabControl" Grid.Row="2" Grid.Column="0" Click="ButtonXamTabControlClick"/>
         <Button x:Name="_buttonXamEditors" Content="XamEditors" Grid.Row="2" Grid.Column="1" Click="ButtonXamEditorsClick"/>
+        <Button x:Name="_buttonXamDockManager" Content="XamDockManager" Grid.Row="2" Grid.Column="2" Click="ButtonXamDockManagerClick"/>
     </Grid>
 </Window>
