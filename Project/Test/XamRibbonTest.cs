@@ -103,8 +103,18 @@ namespace Test
             menu.SelectedTabIndex.Is(1);
             menu.EmulateSelectTab(2);
             menu.SelectedTabIndex.Is(2);
+        }
 
-            //TODO async test
+        [TestMethod]
+        public void ApplicationMenu2010SelectTabAsync()
+        {
+            var menu = _ribbon.ApplicationMenu2010;
+            menu.EmulateOpen();
+            menu.SelectedTabIndex.Is(1);
+            var a = new Async();
+            menu.EmulateSelectTab(2, a);
+            a.WaitForCompletion();
+            menu.SelectedTabIndex.Is(2);
         }
 
         [TestMethod]
@@ -115,8 +125,18 @@ namespace Test
             menu.SelectedTabIndex.Is(1);
             menu.GetItem(2).EmulateClick();
             menu.SelectedTabIndex.Is(2);
+        }
 
-            //TODO async test
+        [TestMethod]
+        public void ApplicationMenu2010ItemClickAsync()
+        {
+            _dlg.Dynamic().ConnectApplicationMenu2010Item2Clicked();
+            var menu = _ribbon.ApplicationMenu2010;
+            menu.EmulateOpen();
+            menu.SelectedTabIndex.Is(1);
+            menu.GetItem(2).EmulateClick(new Async());
+            new NativeMessageBox(_dlg.WaitForNextModal()).EmulateButtonClick("OK");
+            menu.SelectedTabIndex.Is(2);
         }
     }
 }

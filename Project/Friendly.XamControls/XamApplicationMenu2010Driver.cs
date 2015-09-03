@@ -87,6 +87,11 @@ namespace Friendly.XamControls
             Static.EmulateClick(this, This.OnCreateAutomationPeer());
         }
 
+        public void EmulateClick(Async async)
+        {
+            Static.EmulateClick(this, This.OnCreateAutomationPeer(), async);
+        }
+
         static void EmulateClick(dynamic item, AutomationPeer peer)
         {
             item.Focus();

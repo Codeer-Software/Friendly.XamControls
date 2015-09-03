@@ -7,7 +7,6 @@ namespace XamApp
         public XamDockManagerWindow()
         {
             InitializeComponent();
-            _dock.ActivePane.ExecuteCommand(Infragistics.Windows.DockManager.ContentPaneCommands.Close);
         }
     }
 }

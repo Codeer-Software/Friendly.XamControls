@@ -13,6 +13,21 @@ namespace Friendly.XamControls
 
         public XamContentPaneDriver(AppVar src) : base(src) { }
 
+        public void EmulateActivate()
+        {
+            Static.EmulateActivate(this);
+        }
+
+        public void EmulateActivate(Async async)
+        {
+            Static.EmulateActivate(this, async);
+        }
+
+        static void EmulateActivate(dynamic pane)
+        {
+            pane.Activate();
+        }
+
         public void EmulateClose()
         {
             var command = App.Type().Infragistics.Windows.DockManager.ContentPaneCommands.Close;

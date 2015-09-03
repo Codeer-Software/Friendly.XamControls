@@ -24,5 +24,10 @@ namespace XamApp
         {
             _ribbon.RibbonTabItemSelected += delegate { MessageBox.Show(""); };
         }
+
+        void ConnectApplicationMenu2010Item2Clicked()
+        {
+            ((ApplicationMenu2010Item)_ribbon.ApplicationMenu2010.Items[2]).Click += delegate { MessageBox.Show(""); };
+        }
     }
 }
