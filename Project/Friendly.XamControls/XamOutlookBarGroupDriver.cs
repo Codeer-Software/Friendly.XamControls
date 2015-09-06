@@ -8,7 +8,7 @@ namespace Friendly.XamControls
     {
         public bool IsSelected { get { return This.IsSelected; } }
 
-        internal XamOutlookBarGroupDriver(AppVar src) : base(src) { }
+        public XamOutlookBarGroupDriver(AppVar src) : base(src) { }
 
         public void EmulateSelect()
         {

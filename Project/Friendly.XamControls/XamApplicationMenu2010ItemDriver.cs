@@ -11,7 +11,7 @@ namespace Friendly.XamControls
 
         public string HeaderText { get { return AppVar.IsNull ? string.Empty : Header.ToString(); } }
 
-        internal XamApplicationMenu2010ItemDriver(AppVar src) : base(src) { }
+        public XamApplicationMenu2010ItemDriver(AppVar src) : base(src) { }
 
         public void EmulateClick()
         {

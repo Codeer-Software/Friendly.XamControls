@@ -13,7 +13,7 @@ namespace Friendly.XamControls
 
         public string HeaderText { get { return AppVar.IsNull ? string.Empty : Header.ToString(); } }
 
-        internal XamToolMenuItemDriver(AppVar src) : base(src) { }
+        public XamToolMenuItemDriver(AppVar src) : base(src) { }
 
         public void EmulateClick()
         {

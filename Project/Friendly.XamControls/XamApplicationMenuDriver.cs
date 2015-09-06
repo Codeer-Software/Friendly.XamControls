@@ -13,7 +13,7 @@ namespace Friendly.XamControls
 {
     public class XamApplicationMenuDriver : XamControlBase
     {
-        internal XamApplicationMenuDriver(AppVar src) : base(src) { }
+        public XamApplicationMenuDriver(AppVar src) : base(src) { }
 
         public XamToolMenuItemDriver GetItem(params int[] indices)
         {

@@ -14,7 +14,7 @@ namespace Friendly.XamControls
     {
         public bool IsSelected { get { return This.IsSelected; } }
 
-        internal XamTabItemDriver(AppVar src) : base(src) { }
+        public XamTabItemDriver(AppVar src) : base(src) { }
 
         public void EmulateClose()
         {

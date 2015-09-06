@@ -10,7 +10,7 @@ namespace Friendly.XamControls
 
         public bool IsOpen { get { return This.IsOpen; } }
 
-        internal XamApplicationMenu2010Driver(AppVar src) : base(src) { }
+        public XamApplicationMenu2010Driver(AppVar src) : base(src) { }
 
         public XamApplicationMenu2010ItemDriver GetItem(int index)
         {

@@ -13,7 +13,7 @@ namespace Friendly.XamControls
         public AppVar CellData { get; private set; }
         public bool IsActive { get { return CellData.Dynamic().IsActive; } }
 
-        internal XamGridCellDriver(XamGridDriver grid, AppVar cellData)
+        public XamGridCellDriver(XamGridDriver grid, AppVar cellData)
             : base((AppVar)cellData.Dynamic().Control)
         {
             Grid = grid;
