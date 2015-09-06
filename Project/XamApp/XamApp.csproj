@@ -85,6 +85,8 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="UIAutomationClientsideProviders" />
     <Reference Include="UIAutomationProvider" />
     <Reference Include="UIAutomationTypes" />
     <Reference Include="WindowsBase" />
@@ -96,6 +98,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="SearcherInTarget.cs" />
     <Compile Include="XamCalendarWindow.xaml.cs">
       <DependentUpon>XamCalendarWindow.xaml</DependentUpon>
     </Compile>
@@ -116,6 +119,9 @@
     </Compile>
     <Compile Include="XamOutlookBarWindow.xaml.cs">
       <DependentUpon>XamOutlookBarWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="XamRibbon2010Window.xaml.cs">
+      <DependentUpon>XamRibbon2010Window.xaml</DependentUpon>
     </Compile>
     <Compile Include="XamRibbonWindow.xaml.cs">
       <DependentUpon>XamRibbonWindow.xaml</DependentUpon>
@@ -160,6 +166,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="XamOutlookBarWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="XamRibbon2010Window.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

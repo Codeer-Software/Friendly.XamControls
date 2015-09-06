@@ -37,107 +37,37 @@ namespace Test
         }
 
         [TestMethod]
-        public void TestTab()
+        public void TestAppMenuGetItemIndex()
         {
-            _ribbon.SelectedTabIndex.Is(0);
-            _ribbon.EmulateSelectTab(1);
-            _ribbon.SelectedTabIndex.Is(1);
+            var item = _ribbon.ApplicationMenu.GetItem(1, 0, 0);
+            item.HeaderText.Is("b-1-1");
         }
 
         [TestMethod]
-        public void TestTabAsync()
+        public void TestAppMenuGetItemText()
         {
-            _dlg.Dynamic().ConnectRibbonTabItemSelected();
-            _ribbon.EmulateSelectTab(1, new Async());
-            new NativeMessageBox(_dlg.WaitForNextModal()).EmulateButtonClick("OK");
-            _ribbon.SelectedTabIndex.Is(1);
+            var item = _ribbon.ApplicationMenu.GetItem("b", "b-1", "b-1-1");
+            item.HeaderText.Is("b-1-1");
         }
 
         [TestMethod]
-        public void ApplicationMenu2010Open()
+        public void TestEmulateClick()
         {
-            var menu = _ribbon.ApplicationMenu2010;
-            menu.IsOpen.IsFalse();
-            menu.EmulateOpen();
-            menu.IsOpen.IsTrue();
-        }
-
-
-        [TestMethod]
-        public void ApplicationMenu2010OpenAsync()
-        {
-            _dlg.Dynamic().ConnectApplicationMenu2010Opened();
-            var menu = _ribbon.ApplicationMenu2010;
-            menu.EmulateOpen(new Async());
-            new NativeMessageBox(_dlg.WaitForNextModal()).EmulateButtonClick("OK");
-            menu.IsOpen.IsTrue();
+            var item = _ribbon.ApplicationMenu.GetItem("b", "b-1", "b-1-1");
+            ((bool)_dlg.Dynamic().b_1_1_clicked).IsFalse();
+            item.EmulateClick();
+            ((bool)_dlg.Dynamic().b_1_1_clicked).IsTrue();
         }
 
         [TestMethod]
-        public void ApplicationMenu2010Close()
+        public void TestEmulateClickAsync()
         {
-            var menu = _ribbon.ApplicationMenu2010;
-            menu.EmulateOpen();
-            menu.IsOpen.IsTrue();
-            menu.EmulateClose();
-            menu.IsOpen.IsFalse();
-        }
-
-        [TestMethod]
-        public void ApplicationMenu2010CloseAsync()
-        {
-            _dlg.Dynamic().ConnectApplicationMenu2010Closed();
-            var menu = _ribbon.ApplicationMenu2010;
-            menu.EmulateOpen();
-            menu.IsOpen.IsTrue();
-            menu.EmulateClose(new Async());
-            new NativeMessageBox(_dlg.WaitForNextModal()).EmulateButtonClick("OK");
-            menu.IsOpen.IsFalse();
-        }
-
-        [TestMethod]
-        public void ApplicationMenu2010SelectTab()
-        {
-            var menu = _ribbon.ApplicationMenu2010;
-            menu.EmulateOpen();
-            menu.SelectedTabIndex.Is(1);
-            menu.EmulateSelectTab(2);
-            menu.SelectedTabIndex.Is(2);
-        }
-
-        [TestMethod]
-        public void ApplicationMenu2010SelectTabAsync()
-        {
-            var menu = _ribbon.ApplicationMenu2010;
-            menu.EmulateOpen();
-            menu.SelectedTabIndex.Is(1);
-            var a = new Async();
-            menu.EmulateSelectTab(2, a);
+            var item = _ribbon.ApplicationMenu.GetItem("b", "b-1", "b-1-1");
+            ((bool)_dlg.Dynamic().b_1_1_clicked).IsFalse();
+            Async a = new Async();
+            item.EmulateClick(a);
             a.WaitForCompletion();
-            menu.SelectedTabIndex.Is(2);
-        }
-
-        [TestMethod]
-        public void ApplicationMenu2010ItemClick()
-        {
-            var menu = _ribbon.ApplicationMenu2010;
-            menu.EmulateOpen();
-            menu.SelectedTabIndex.Is(1);
-            menu.GetItem(2).EmulateClick();
-            menu.SelectedTabIndex.Is(2);
-        }
-
-        [TestMethod]
-        public void ApplicationMenu2010ItemClickAsync()
-        {
-            _dlg.Dynamic().ConnectApplicationMenu2010Item2Clicked();
-            var menu = _ribbon.ApplicationMenu2010;
-            menu.EmulateOpen();
-            menu.SelectedTabIndex.Is(1);
-            menu.GetItem(2).EmulateClick(new Async());
-            new NativeMessageBox(_dlg.WaitForNextModal()).EmulateButtonClick("OK");
-            menu.SelectedTabIndex.Is(2);
+            ((bool)_dlg.Dynamic().b_1_1_clicked).IsTrue();
         }
     }
 }
-

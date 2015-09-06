@@ -21,6 +21,11 @@ namespace XamApp
             dlg.ShowDialog();
         }
 
+        void ButtonXamRibbon2010Click(object sender, RoutedEventArgs e)
+        {
+            var dlg = new XamRibbonWindow2010();
+            dlg.ShowDialog();
+        }
         void ButtonXamRibbonClick(object sender, RoutedEventArgs e)
         {
             var dlg = new XamRibbonWindow();

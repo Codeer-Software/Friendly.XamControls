@@ -75,6 +75,10 @@
     </Reference>
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xaml" />
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="UIAutomationClientsideProviders" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <Choose>
@@ -91,7 +95,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Target.cs" />
-    <Compile Include="XamApplicationMenu2010Driver.cs" />
+    <Compile Include="XamRibbonTest.cs" />
     <Compile Include="XamDockManagerTest.cs" />
     <Compile Include="XamEditorsTest.cs" />
     <Compile Include="XamCalendarTest.cs" />
@@ -99,7 +103,7 @@
     <Compile Include="XamDataTreeTest.cs" />
     <Compile Include="XamGridTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="XamRibbonTest.cs" />
+    <Compile Include="XamRibbon2010Test.cs" />
     <Compile Include="XamTabControlTest.cs" />
     <Compile Include="XamOutlookBarTest.cs" />
   </ItemGroup>

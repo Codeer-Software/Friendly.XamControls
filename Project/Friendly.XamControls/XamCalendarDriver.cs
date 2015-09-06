@@ -14,34 +14,34 @@ namespace Friendly.XamControls
 
         public XamCalendarDriver(AppVar src) : base(src) { }
 
-        public void EmualteChangeDate(DateTime? date)
+        public void EmulateChangeDate(DateTime? date)
         {
-            Static.EmualteChangeDate(this, date);
+            Static.EmulateChangeDate(this, date);
         }
 
-        public void EmualteChangeDate(DateTime? date, Async async)
+        public void EmulateChangeDate(DateTime? date, Async async)
         {
-            Static.EmualteChangeDate(this, date, async);
+            Static.EmulateChangeDate(this, date, async);
         }
 
-        static void EmualteChangeDate(dynamic calendar, DateTime? date)
+        static void EmulateChangeDate(dynamic calendar, DateTime? date)
         {
             calendar.Focus();
             calendar.SelectedDate = date;
             calendar.ActiveDate = date;
         }
 
-        public void EmualteAddDate(DateTime date)
+        public void EmulateAddDate(DateTime date)
         {
-            Static.EmualteAddDate(this, date);
+            Static.EmulateAddDate(this, date);
         }
 
-        public void EmualteAddDate(DateTime date, Async async)
+        public void EmulateAddDate(DateTime date, Async async)
         {
-            Static.EmualteAddDate(this, date, async);
+            Static.EmulateAddDate(this, date, async);
         }
 
-        static void EmualteAddDate(dynamic calendar, DateTime date)
+        static void EmulateAddDate(dynamic calendar, DateTime date)
         {
             calendar.Focus();
             calendar.SelectedDates.Add(date);

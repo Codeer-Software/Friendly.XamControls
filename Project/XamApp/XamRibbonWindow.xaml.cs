@@ -1,5 +1,20 @@
 ﻿using Infragistics.Windows.Ribbon;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
+using System.Text;
 using System.Windows;
+using System.Windows.Automation.Peers;
+using System.Windows.Automation.Provider;
+using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
 
 namespace XamApp
 {
@@ -10,24 +25,10 @@ namespace XamApp
             InitializeComponent();
         }
 
-        public void ConnectApplicationMenu2010Opened()
+        bool b_1_1_clicked;
+        private void Click_B_1_1(object sender, RoutedEventArgs e)
         {
-            _ribbon.ApplicationMenu2010.Opened += delegate { MessageBox.Show(""); };
-        }
-
-        public void ConnectApplicationMenu2010Closed()
-        {
-            _ribbon.ApplicationMenu2010.Closed += delegate { MessageBox.Show(""); };
-        }
-
-        void ConnectRibbonTabItemSelected()
-        {
-            _ribbon.RibbonTabItemSelected += delegate { MessageBox.Show(""); };
-        }
-
-        void ConnectApplicationMenu2010Item2Clicked()
-        {
-            ((ApplicationMenu2010Item)_ribbon.ApplicationMenu2010.Items[2]).Click += delegate { MessageBox.Show(""); };
+            b_1_1_clicked = true;
         }
     }
 }

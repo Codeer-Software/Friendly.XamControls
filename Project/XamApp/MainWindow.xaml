@@ -12,16 +12,18 @@
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
         <Button x:Name="_buttonXamGrid" Content="XamGrid" Grid.Row="0" Grid.Column="0" Click="ButtonXamGridClick"/>
         <Button x:Name="_buttonXamDataGrid" Content="XamDataGrid" Grid.Row="0" Grid.Column="1" Click="ButtonXamDataGridClick"/>
-        <Button x:Name="_buttonXamRibbon" Content="XamRibbon" Grid.Row="0" Grid.Column="2" Click="ButtonXamRibbonClick"/>
+        <Button x:Name="_buttonXamRibbon2010" Content="XamRibbon2010" Grid.Row="0" Grid.Column="2" Click="ButtonXamRibbon2010Click"/>
+        <Button x:Name="_buttonXamRibbon" Content="XamRibbon" Grid.Row="0" Grid.Column="3" Click="ButtonXamRibbonClick"/>
         <Button x:Name="_buttonXamDataTree" Content="XamDataTree" Grid.Row="1" Grid.Column="0" Click="ButtonXamDataTreeClick"/>
         <Button x:Name="_buttonXamOutlookBar" Content="XamOutlookBar" Grid.Row="1" Grid.Column="1" Click="ButtonXamOutlookBarClick"/>
         <Button x:Name="_buttonXamCalendar" Content="XamCalendar" Grid.Row="1" Grid.Column="2" Click="ButtonXamCalendarClick"/>
+        <Button x:Name="_buttonXamDockManager" Content="XamDockManager" Grid.Row="1" Grid.Column="3" Click="ButtonXamDockManagerClick"/>
         <Button x:Name="_buttonXamTabControl" Content="XamTabControl" Grid.Row="2" Grid.Column="0" Click="ButtonXamTabControlClick"/>
         <Button x:Name="_buttonXamEditors" Content="XamEditors" Grid.Row="2" Grid.Column="1" Click="ButtonXamEditorsClick"/>
-        <Button x:Name="_buttonXamDockManager" Content="XamDockManager" Grid.Row="2" Grid.Column="2" Click="ButtonXamDockManagerClick"/>
     </Grid>
 </Window>

@@ -10,6 +10,8 @@ namespace Friendly.XamControls
     {
         public int SelectedTabIndex { get { return Static.GetSelectedTabIndex(this); } }
 
+        public XamApplicationMenuDriver ApplicationMenu { get { return new XamApplicationMenuDriver(This.ApplicationMenu); } }
+
         public XamApplicationMenu2010Driver ApplicationMenu2010 { get { return new XamApplicationMenu2010Driver(This.ApplicationMenu2010); } }
 
         public XamRibbonDriver(AppVar src) : base(src) { }

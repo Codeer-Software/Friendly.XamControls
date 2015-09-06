@@ -37,30 +37,30 @@ namespace Test
         }
 
         [TestMethod]
-        public void TestEmualteChangeDate()
+        public void TestEmulateChangeDate()
         {
             _calendar.SelectedDates.Length.Is(0);
-            _calendar.EmualteChangeDate(new DateTime(2015, 7, 15));
+            _calendar.EmulateChangeDate(new DateTime(2015, 7, 15));
             _calendar.ActiveDate.Is(new DateTime(2015, 7, 15));
             _calendar.SelectedDates.Length.Is(1);
-            _calendar.EmualteChangeDate(new DateTime(2015, 7, 14));
+            _calendar.EmulateChangeDate(new DateTime(2015, 7, 14));
             _calendar.SelectedDates.Length.Is(1);
         }
 
         [TestMethod]
-        public void TestEmualteChangeDateAsync()
+        public void TestEmulateChangeDateAsync()
         {
             _dlg.Dynamic().ConnectSelectedDatesChanged();
-            _calendar.EmualteChangeDate(new DateTime(2015, 7, 15), new Async());
+            _calendar.EmulateChangeDate(new DateTime(2015, 7, 15), new Async());
             new NativeMessageBox(_dlg.WaitForNextModal()).EmulateButtonClick("OK");
             _calendar.ActiveDate.Is(new DateTime(2015, 7, 15));
         }
 
         [TestMethod]
-        public void TestEmualteAddDate()
+        public void TestEmulateAddDate()
         {
-            _calendar.EmualteChangeDate(new DateTime(2015, 7, 14));
-            _calendar.EmualteAddDate(new DateTime(2015, 7, 13));
+            _calendar.EmulateChangeDate(new DateTime(2015, 7, 14));
+            _calendar.EmulateAddDate(new DateTime(2015, 7, 13));
             _calendar.ActiveDate.Is(new DateTime(2015, 7, 13));
             var dates = _calendar.SelectedDates;
             dates.Length.Is(2);
@@ -69,12 +69,12 @@ namespace Test
         }
 
         [TestMethod]
-        public void TestEmualteAddDateAsync()
+        public void TestEmulateAddDateAsync()
         {
-            _calendar.EmualteChangeDate(new DateTime(2015, 7, 15));
+            _calendar.EmulateChangeDate(new DateTime(2015, 7, 15));
 
             _dlg.Dynamic().ConnectSelectedDatesChanged();
-            _calendar.EmualteAddDate(new DateTime(2015, 7, 13), new Async());
+            _calendar.EmulateAddDate(new DateTime(2015, 7, 13), new Async());
             new NativeMessageBox(_dlg.WaitForNextModal()).EmulateButtonClick("OK");
             var dates = _calendar.SelectedDates;
             dates.Length.Is(2);

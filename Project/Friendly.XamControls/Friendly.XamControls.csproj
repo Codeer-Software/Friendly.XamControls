@@ -63,6 +63,8 @@
     <Compile Include="Inside\ProcessExtensions.cs" />
     <Compile Include="Inside\XamControlBase.cs" />
     <Compile Include="XamApplicationMenu2010Driver.cs" />
+    <Compile Include="XamApplicationMenu2010ItemDriver.cs" />
+    <Compile Include="XamApplicationMenuDriver.cs" />
     <Compile Include="XamCalendarDriver.cs" />
     <Compile Include="XamComboEditorDriver.cs" />
     <Compile Include="XamContentPaneDriver.cs" />
@@ -89,6 +91,7 @@
     <Compile Include="XamRibbonDriver.cs" />
     <Compile Include="XamTabControlDriver.cs" />
     <Compile Include="XamTabItemDriver.cs" />
+    <Compile Include="XamToolMenuItemDriver.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
