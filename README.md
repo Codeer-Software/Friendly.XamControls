@@ -12,12 +12,32 @@ Friendly.XamControls defines the following classes.
 They can operate the control easily from a separate process.  
 
 * XamCalendarDriver
+* XamComboEditorDriver
+* XamContentPaneDriver
 * XamDataGridDriver
+* XamDataGridCellDriver
+* XamDataGridCheckCellDriver
+* XamDataGridComboCellDriver
+* XamDataGridTextCellDriver
 * XamDataTreeDriver
+* XamDataTreeCheckNodeDriver
+* XamDataTreeNodeDriver
+* XamDataTreeTextNodeDriver
+* XamDockManagerDriver
 * XamGridDriver
+* XamGridCellDriver
+* XamGridCheckCellDriver
+* XamGridComboCellDriver
+* XamGridTextCellDriver
 * XamOutlookBarDriver
+* XamOutlookBarGroupDriver
 * XamRibbonDriver
+* XamApplicationMenu2010Driver
+* XamApplicationMenu2010ItemDriver
+* XamApplicationMenuDriver
+* XamToolMenuItemDriver
 * XamTabControlDriver
+* XamTabItemDriver
 
 ============================
 ```cs  
