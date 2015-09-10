@@ -13,6 +13,7 @@ They can operate the control easily from a separate process.
 
 * XamCalendarDriver
 * XamComboEditorDriver
+* XamValueEditorDriver
 * XamContentPaneDriver
 * XamDataGridDriver
 * XamDataGridCellDriver
