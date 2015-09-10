@@ -92,6 +92,7 @@
     <Compile Include="XamTabControlDriver.cs" />
     <Compile Include="XamTabItemDriver.cs" />
     <Compile Include="XamToolMenuItemDriver.cs" />
+    <Compile Include="XamValueEditorDriver.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

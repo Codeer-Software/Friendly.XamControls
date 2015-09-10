@@ -14,7 +14,7 @@ namespace Friendly.XamControls
             This.BringCellIntoView(cell);
             App.Type(typeof(InvokeUtility)).DoEvents();
             var ctrl = App.Type().Infragistics.Windows.DataPresenter.CellValuePresenter.FromCell(cell);
-            return new XamDataGridCellDriver(this, ctrl);
+            return new XamDataGridCellDriver(this, cell, ctrl);
         }
     }
 }

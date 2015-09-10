@@ -13,21 +13,21 @@ namespace Friendly.XamControls
         public int SelectedIndex { get { return AppVar.IdentifyByType("Infragistics.Windows.Editors.XamComboEditor").SelectedIndex; } }
 
         public XamDataGridComboCellDriver(XamDataGridCellDriver cell)
-            : base(cell.Grid, cell.AppVar) { }
+            : base(cell) { }
 
         public void EmulateEdit(int index)
         {
-            Static.EmulateEdit(this, index);
+            Static.EmulateEdit(Cell, this, index);
         }
 
         public void EmulateEdit(int index, Async async)
         {
-            Static.EmulateEdit(this, index, async);
+            Static.EmulateEdit(Cell, this, index, async);
         }
 
-        static void EmulateEdit(dynamic control, int index)
+        static void EmulateEdit(dynamic cell, dynamic control, int index)
         {
-            EmulateActivate(control);
+            EmulateActivate(cell, control);
             control.StartEditMode();
             InvokeUtility.DoEvents();
             DependencyObject ctrl = control;
@@ -38,23 +38,23 @@ namespace Friendly.XamControls
 
         public void EmulateEdit(string text)
         {
-            Static.EmulateEdit(this, text);
+            Static.EmulateEdit(Cell, this, text);
         }
 
         public void EmulateEdit(string text, Async async)
         {
-            Static.EmulateEdit(this, text, async);
+            Static.EmulateEdit(Cell, this, text, async);
         }
 
-        static void EmulateEdit(dynamic cell, string text)
+        static void EmulateEdit(dynamic cell, dynamic control, string text)
         {
-            EmulateActivate(cell);
-            cell.StartEditMode();
+            EmulateActivate(cell, control);
+            control.StartEditMode();
             InvokeUtility.DoEvents();
-            DependencyObject ctrl = cell;
+            DependencyObject ctrl = control;
             dynamic comboBox = ctrl.VisualTree().ByType("Infragistics.Windows.Editors.XamComboEditor").Single();
             comboBox.Text = text;
-            cell.EndEditMode(true, false);
+            control.EndEditMode(true, false);
         }
     }
 

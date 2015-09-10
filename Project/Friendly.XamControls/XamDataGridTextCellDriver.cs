@@ -11,21 +11,21 @@ namespace Friendly.XamControls
         public string Text { get { return This.Editor.Text; } }
 
         public XamDataGridTextCellDriver(XamDataGridCellDriver cell)
-            : base(cell.Grid, cell.AppVar) {}
+            : base(cell) {}
 
         public void EmulateEdit(string text)
         {
-            Static.EmulateEdit(this, text);
+            Static.EmulateEdit(Cell, this, text);
         }
 
         public void EmulateEdit(string text, Async async)
         {
-            Static.EmulateEdit(this, text, async);
+            Static.EmulateEdit(Cell, this, text, async);
         }
 
-        static void EmulateEdit(dynamic control, string text)
+        static void EmulateEdit(dynamic cell, dynamic control, string text)
         {
-            EmulateActivate(control);
+            EmulateActivate(cell, control);
             control.StartEditMode();
             InvokeUtility.DoEvents();
             control.Editor.Text = text;

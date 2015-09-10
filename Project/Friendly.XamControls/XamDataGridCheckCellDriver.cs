@@ -11,21 +11,21 @@ namespace Friendly.XamControls
         public bool? IsChecked { get { return AppVar.IdentifyByType("Infragistics.Windows.Editors.XamCheckEditor").IsChecked; } }
 
         public XamDataGridCheckCellDriver(XamDataGridCellDriver cell)
-            : base(cell.Grid, cell.AppVar) { }
+            : base(cell) { }
 
         public void EmulateEdit(bool? check)
         {
-            Static.EmulateEdit(this, check);
+            Static.EmulateEdit(Cell, this, check);
         }
 
         public void EmulateEdit(bool? check, Async async)
         {
-            Static.EmulateEdit(this, check, async);
+            Static.EmulateEdit(Cell, this, check, async);
         }
 
-        static void EmulateEdit(dynamic control, bool? check)
+        static void EmulateEdit(dynamic cell, dynamic control, bool? check)
         {
-            EmulateActivate(control);
+            EmulateActivate(cell, control);
             control.StartEditMode();
             InvokeUtility.DoEvents();
             DependencyObject ctrl = control;

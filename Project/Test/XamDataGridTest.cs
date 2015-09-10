@@ -43,6 +43,8 @@ namespace Test
             cell.IsActive.IsFalse();
             cell.EmulateActivate();
             cell.IsActive.IsTrue();
+            AppVar item = _grid.Dynamic().SelectedDataItem;
+            item.IsNull.IsFalse();
         }
 
         [TestMethod]

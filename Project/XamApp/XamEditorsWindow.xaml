@@ -1,11 +1,17 @@
 ﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:ig="http://schemas.infragistics.com/xaml" x:Class="XamApp.XamEditorsWindow"
+        xmlns:ig="http://schemas.infragistics.com/xaml" xmlns:Custom="http://infragistics.com/Editors" x:Class="XamApp.XamEditorsWindow"
         Title="XamEditorsWindow" Height="300" Width="300">
     <Grid>
 
         <ig:XamComboEditor x:Name="_combo" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.172,-1.727" Height="23" Width="112"/>
+
+        <Custom:XamNumericEditor x:Name="_numeric" HorizontalAlignment="Left" Margin="10,51,0,0" VerticalAlignment="Top" Height="23" Width="112"/>
+        <Custom:XamDateTimeEditor x:Name="_dateTime" HorizontalAlignment="Left" Margin="10,93,0,0" VerticalAlignment="Top" Width="112"/>
+        <Custom:XamCurrencyEditor x:Name="_currency" HorizontalAlignment="Left" Margin="10,135,0,0" VerticalAlignment="Top" Width="112"/>
+        <Custom:XamMaskedEditor x:Name="_masked" HorizontalAlignment="Left" Margin="10,173,0,0" VerticalAlignment="Top" Width="112"/>
+        <Custom:XamTextEditor x:Name="_text" HorizontalAlignment="Left" Margin="10,213,0,0" VerticalAlignment="Top" Width="112"/>
 
     </Grid>
 </Window>
