@@ -46,7 +46,7 @@ They can operate the control easily from a separate process.
 var process = Process.GetProcessesByName("Target")[0];  
 using (var app = new WindowsAppFriend(process))  
 {  
-    dynamic main = app.Type(typeof(Application)).OpenForms[0];  
+    dynamic main = app.Type(typeof(Application)).Current.Window;  
     var _grid = new XamGridDriver(main._grid);
     
     var cell = _grid.GetCell(2, 1);
