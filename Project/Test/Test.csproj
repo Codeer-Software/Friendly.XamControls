@@ -39,40 +39,47 @@
     <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ChainingAssertion">
-      <HintPath>..\packages\ChainingAssertion.Bin.1.7.1.0\lib\net40\ChainingAssertion.dll</HintPath>
+    <Reference Include="ChainingAssertion, Version=1.8.1.3, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ChainingAssertion.Bin.1.8.1.3\lib\net40\ChainingAssertion.dll</HintPath>
     </Reference>
-    <Reference Include="Codeer.Friendly">
-      <HintPath>..\packages\Codeer.Friendly.2.5.0\lib\net40\Codeer.Friendly.dll</HintPath>
+    <Reference Include="Codeer.Friendly, Version=2.5.2.0, Culture=neutral, PublicKeyToken=6c44da6fca38aa86, processorArchitecture=MSIL">
+      <HintPath>..\packages\Codeer.Friendly.2.5.2\lib\net40\Codeer.Friendly.dll</HintPath>
     </Reference>
-    <Reference Include="Codeer.Friendly.Dynamic">
-      <HintPath>..\packages\Codeer.Friendly.2.5.0\lib\net40\Codeer.Friendly.Dynamic.dll</HintPath>
+    <Reference Include="Codeer.Friendly.Dynamic, Version=2.5.2.0, Culture=neutral, PublicKeyToken=376bc779077733e8, processorArchitecture=MSIL">
+      <HintPath>..\packages\Codeer.Friendly.2.5.2\lib\net40\Codeer.Friendly.Dynamic.dll</HintPath>
     </Reference>
-    <Reference Include="Codeer.Friendly.Windows, Version=2.7.0.0, Culture=neutral, PublicKeyToken=532f270f1da385b3, processorArchitecture=MSIL">
-      <HintPath>..\packages\Codeer.Friendly.Windows.2.7.0\lib\net20\Codeer.Friendly.Windows.dll</HintPath>
+    <Reference Include="Codeer.Friendly.Windows, Version=2.9.0.0, Culture=neutral, PublicKeyToken=532f270f1da385b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Codeer.Friendly.Windows.2.9.0\lib\net20\Codeer.Friendly.Windows.dll</HintPath>
     </Reference>
     <Reference Include="Codeer.Friendly.Windows.Grasp, Version=2.6.0.0, Culture=neutral, PublicKeyToken=92809a28945fb91d, processorArchitecture=MSIL">
       <HintPath>..\packages\Codeer.Friendly.Windows.Grasp.2.6.0\lib\net20\Codeer.Friendly.Windows.Grasp.dll</HintPath>
     </Reference>
-    <Reference Include="Codeer.Friendly.Windows.NativeStandardControls, Version=2.3.0.0, Culture=neutral, PublicKeyToken=90759bf0c8b8639e, processorArchitecture=MSIL">
-      <HintPath>..\packages\Codeer.Friendly.Windows.NativeStandardControls.2.3.0\lib\net20\Codeer.Friendly.Windows.NativeStandardControls.dll</HintPath>
+    <Reference Include="Codeer.Friendly.Windows.Grasp.2.0, Version=2.7.1.0, Culture=neutral, PublicKeyToken=92809a28945fb91d, processorArchitecture=MSIL">
+      <HintPath>..\packages\Codeer.Friendly.Windows.Grasp.2.7.1\lib\net35\Codeer.Friendly.Windows.Grasp.2.0.dll</HintPath>
+    </Reference>
+    <Reference Include="Codeer.Friendly.Windows.Grasp.3.5, Version=2.7.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Codeer.Friendly.Windows.Grasp.2.7.1\lib\net35\Codeer.Friendly.Windows.Grasp.3.5.dll</HintPath>
+    </Reference>
+    <Reference Include="Codeer.Friendly.Windows.NativeStandardControls, Version=2.5.0.0, Culture=neutral, PublicKeyToken=90759bf0c8b8639e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Codeer.Friendly.Windows.NativeStandardControls.2.5.0\lib\net20\Codeer.Friendly.Windows.NativeStandardControls.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-    <Reference Include="RM.Friendly.WPFStandardControls.3.0, Version=1.9.0.0, Culture=neutral, PublicKeyToken=1b8f25b96765ebb0, processorArchitecture=MSIL">
-      <HintPath>..\packages\RM.Friendly.WPFStandardControls.1.9.0\lib\net40\RM.Friendly.WPFStandardControls.3.0.dll</HintPath>
+    <Reference Include="RM.Friendly.WPFStandardControls.3.0, Version=1.11.1.0, Culture=neutral, PublicKeyToken=1b8f25b96765ebb0, processorArchitecture=MSIL">
+      <HintPath>..\packages\RM.Friendly.WPFStandardControls.1.11.1\lib\net40\RM.Friendly.WPFStandardControls.3.0.dll</HintPath>
     </Reference>
-    <Reference Include="RM.Friendly.WPFStandardControls.3.5, Version=1.9.0.0, Culture=neutral, PublicKeyToken=133fc95b5bce0b86, processorArchitecture=MSIL">
-      <HintPath>..\packages\RM.Friendly.WPFStandardControls.1.9.0\lib\net40\RM.Friendly.WPFStandardControls.3.5.dll</HintPath>
+    <Reference Include="RM.Friendly.WPFStandardControls.3.5, Version=1.11.1.0, Culture=neutral, PublicKeyToken=133fc95b5bce0b86, processorArchitecture=MSIL">
+      <HintPath>..\packages\RM.Friendly.WPFStandardControls.1.11.1\lib\net40\RM.Friendly.WPFStandardControls.3.5.dll</HintPath>
     </Reference>
-    <Reference Include="RM.Friendly.WPFStandardControls.4.0, Version=1.9.0.0, Culture=neutral, PublicKeyToken=804da7e4293a9f15, processorArchitecture=MSIL">
-      <HintPath>..\packages\RM.Friendly.WPFStandardControls.1.9.0\lib\net40\RM.Friendly.WPFStandardControls.4.0.dll</HintPath>
+    <Reference Include="RM.Friendly.WPFStandardControls.4.0, Version=1.11.1.0, Culture=neutral, PublicKeyToken=804da7e4293a9f15, processorArchitecture=MSIL">
+      <HintPath>..\packages\RM.Friendly.WPFStandardControls.1.11.1\lib\net40\RM.Friendly.WPFStandardControls.4.0.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xaml" />
     <Reference Include="UIAutomationClient" />
@@ -108,13 +115,14 @@
     <Compile Include="XamOutlookBarTest.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Friendly.XamControls\Friendly.XamControls.csproj">
       <Project>{3a47b26c-2a80-4e82-837b-f1dcbec9b02d}</Project>
       <Name>Friendly.XamControls</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
