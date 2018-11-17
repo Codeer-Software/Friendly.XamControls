@@ -1,11 +1,10 @@
 ﻿using Codeer.Friendly;
-using Codeer.Friendly.Dynamic;
+using Codeer.TestAssistant.GeneratorToolKit;
 using Friendly.XamControls.Inside;
-using System;
-using System.Collections.Generic;
 
 namespace Friendly.XamControls
 {
+    [ControlDriver(TypeFullName = "Infragistics.Windows.Ribbon.XamRibbon")]
     public class XamRibbonDriver : XamControlBase
     {
         public int SelectedTabIndex { get { return Static.GetSelectedTabIndex(this); } }

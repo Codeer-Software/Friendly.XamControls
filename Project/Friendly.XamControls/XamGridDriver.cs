@@ -1,9 +1,10 @@
 ﻿using Codeer.Friendly;
-using Codeer.Friendly.Dynamic;
 using Friendly.XamControls.Inside;
+using Codeer.TestAssistant.GeneratorToolKit;
 
 namespace Friendly.XamControls
 {
+    [ControlDriver(TypeFullName = "Infragistics.Controls.Grids.XamGrid")]
     public class XamGridDriver : XamControlBase
     {
         public XamGridDriver(AppVar src) : base(src) { }

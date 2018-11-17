@@ -1,11 +1,10 @@
 ﻿using Codeer.Friendly;
 using Friendly.XamControls.Inside;
-using System.Windows;
-using System.Windows.Controls;
-using System.Linq;
+using Codeer.TestAssistant.GeneratorToolKit;
 
 namespace Friendly.XamControls
 {
+    [ControlDriver(TypeFullName = "Infragistics.Windows.Editors.XamComboEditor")]
     public class XamComboEditorDriver : XamControlBase
     {
         public int ItemCount { get { return This.Items.Count; } }

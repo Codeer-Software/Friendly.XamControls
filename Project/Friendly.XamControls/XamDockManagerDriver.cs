@@ -3,9 +3,11 @@ using Friendly.XamControls.Inside;
 using Codeer.Friendly.Dynamic;
 using System.Collections.Generic;
 using System.Diagnostics;
+using Codeer.TestAssistant.GeneratorToolKit;
 
 namespace Friendly.XamControls
 {
+    [ControlDriver(TypeFullName = "Infragistics.Windows.DockManager.XamDockManager")]
     public class XamDockManagerDriver : XamControlBase
     {
         public XamContentPaneDriver ActivePane { get { return new XamContentPaneDriver(Static.GetActivePane(this)); } }

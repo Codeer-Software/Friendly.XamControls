@@ -1,11 +1,12 @@
 ﻿using Codeer.Friendly;
-using Codeer.Friendly.Dynamic;
 using Friendly.XamControls.Inside;
 using System;
 using System.Collections.Generic;
+using Codeer.TestAssistant.GeneratorToolKit;
 
 namespace Friendly.XamControls
 {
+    [ControlDriver(TypeFullName = "Infragistics.Controls.Editors.XamCalendar")]
     public class XamCalendarDriver : XamControlBase
     {
         public DateTime? ActiveDate { get { return This.ActiveDate; } }

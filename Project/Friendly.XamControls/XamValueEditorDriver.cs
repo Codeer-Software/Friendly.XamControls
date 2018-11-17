@@ -1,11 +1,10 @@
 ﻿using Codeer.Friendly;
 using Friendly.XamControls.Inside;
-using System.Windows;
-using System.Windows.Controls;
-using System.Linq;
+using Codeer.TestAssistant.GeneratorToolKit;
 
 namespace Friendly.XamControls
 {
+    [ControlDriver(TypeFullName = "Infragistics.Windows.Editors.TextEditorBase")]
     public class XamValueEditorDriver : XamControlBase
     {
         public string Text { get { return This.Text; } }

@@ -9,6 +9,7 @@ using RM.Friendly.WPFStandardControls;
 using Codeer.Friendly.Windows.Grasp;
 using Friendly.XamControls;
 using Codeer.Friendly.Windows.NativeStandardControls;
+using Test.DriverTest;
 
 namespace Test
 {
@@ -199,6 +200,32 @@ namespace Test
             cell.EmulateEdit("abc", new Async());
             new NativeMessageBox(_dlg.WaitForNextModal()).EmulateButtonClick("OK");
             cell.Text.Is("abc");
+        }
+
+
+        void xxx()
+        {
+            var xamDataGridWindow = _app.Attach_XamDataGridWindow();
+            xamDataGridWindow._grid.GetCell(8, 0).AsText().EmulateEdit("t8");
+            xamDataGridWindow._grid.GetCell(1, 0).EmulateActivate();
+            xamDataGridWindow._grid.GetCell(1, 0).AsText().EmulateEdit("123");
+            xamDataGridWindow._grid.GetCell(1, 1).EmulateActivate();
+            xamDataGridWindow._grid.GetCell(1, 1).AsCombo().EmulateEdit("c");
+            xamDataGridWindow._grid.GetCell(1, 2).EmulateActivate();
+            xamDataGridWindow._grid.GetCell(1, 2).AsCheck().EmulateEdit(false);
+            xamDataGridWindow._grid.GetCell(1, 3).EmulateActivate();
+            xamDataGridWindow._grid.GetCell(1, 3).AsText().EmulateEdit("0001年01月06日");
+            xamDataGridWindow._grid.GetCell(1, 4).EmulateActivate();
+            xamDataGridWindow._grid.GetCell(1, 4).AsText().EmulateEdit("¥123");
+            xamDataGridWindow._grid.GetCell(1, 5).EmulateActivate();
+            xamDataGridWindow._grid.GetCell(1, 5).AsText().EmulateEdit("334");
+            xamDataGridWindow._grid.GetCell(1, 6).EmulateActivate();
+            xamDataGridWindow._grid.GetCell(1, 6).AsText().EmulateEdit("6667");
+
+
+            xamDataGridWindow._grid.GetCell(1, 1).EmulateActivate();
+            xamDataGridWindow._grid.GetCell(1, 1).AsCombo().EmulateEdit("b");
+
         }
     }
 }

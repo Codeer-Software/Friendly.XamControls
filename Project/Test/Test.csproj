@@ -113,6 +113,17 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="DriverTest\MainWindow_Driver.cs" />
+    <Compile Include="DriverTest\XamCalendarWindow_Driver.cs" />
+    <Compile Include="DriverTest\XamDataGridWindow_Driver.cs" />
+    <Compile Include="DriverTest\XamDataTreeWindow_Driver.cs" />
+    <Compile Include="DriverTest\XamDockManagerWindow_Driver.cs" />
+    <Compile Include="DriverTest\XamEditorsWindow_Driver.cs" />
+    <Compile Include="DriverTest\XamGridWindow_Driver.cs" />
+    <Compile Include="DriverTest\XamOutlookBarWindow_Driver.cs" />
+    <Compile Include="DriverTest\XamRibbonWindow2010_Driver.cs" />
+    <Compile Include="DriverTest\XamRibbonWindow_Driver.cs" />
+    <Compile Include="DriverTest\XamTabControlWindow_Driver.cs" />
     <Compile Include="Target.cs" />
     <Compile Include="XamRibbonTest.cs" />
     <Compile Include="XamDockManagerTest.cs" />
@@ -127,6 +138,10 @@
     <Compile Include="XamOutlookBarTest.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Friendly.XamControls.Generator\Friendly.XamControls.Generator.csproj">
+      <Project>{9a1cec5b-f46f-4f97-b903-4121e84f44d8}</Project>
+      <Name>Friendly.XamControls.Generator</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Friendly.XamControls\Friendly.XamControls.csproj">
       <Project>{3a47b26c-2a80-4e82-837b-f1dcbec9b02d}</Project>
       <Name>Friendly.XamControls</Name>
@@ -136,6 +151,7 @@
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
