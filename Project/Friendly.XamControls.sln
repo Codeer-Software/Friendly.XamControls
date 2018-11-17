@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Friendly.XamControls", "Friendly.XamControls\Friendly.XamControls.csproj", "{3A47B26C-2A80-4E82-837B-F1DCBEC9B02D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9A1CEC5B-F46F-4F97-B903-4121E84F44D8} = {9A1CEC5B-F46F-4F97-B903-4121E84F44D8}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamApp", "XamApp\XamApp.csproj", "{40F50649-99A6-4A3C-8CBD-3BE78B7B4D57}"
 EndProject
