@@ -13,11 +13,12 @@ namespace XamApp
                 new ComboCandidate(){Text = "b"},
                 new ComboCandidate(){Text = "c"},
             };
+            
         }
 
         void ConnectSelectedIndexChanged() 
         {
-            _combo.SelectionChanged += delegate { MessageBox.Show(""); };
+            _combo.SelectedItemChanged += delegate { MessageBox.Show(""); };
         }
 
         public class ComboCandidate 
