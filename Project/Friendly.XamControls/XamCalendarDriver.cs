@@ -42,11 +42,29 @@ namespace Friendly.XamControls
             Static.EmulateAddDate(this, date, async);
         }
 
+        public void EmulateRemoveDate(DateTime date)
+        {
+            Static.EmulateRemoveDate(this, date);
+        }
+
+        public void EmulateRemoveDate(DateTime date, Async async)
+        {
+            Static.EmulateRemoveDate(this, date, async);
+        }
+
         static void EmulateAddDate(dynamic calendar, DateTime date)
         {
             calendar.Focus();
+            calendar.BringDateIntoView(date);
             calendar.SelectedDates.Add(date);
             calendar.ActiveDate = date;
+        }
+
+        static void EmulateRemoveDate(dynamic calendar, DateTime date)
+        {
+            calendar.Focus();
+            calendar.BringDateIntoView(date);
+            calendar.SelectedDates.Remove(date);
         }
 
         static DateTime[] GetSelectedDates(dynamic calendar) 

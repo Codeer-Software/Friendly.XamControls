@@ -51,11 +51,16 @@
     <Compile Include="GenerateUtility.cs" />
     <Compile Include="ReflectionAccessor.cs" />
     <Compile Include="TreeUtility.cs" />
+    <Compile Include="XamCalendarDriverGenerator.cs" />
+    <Compile Include="XamComboEditorDriverGenerator.cs" />
     <Compile Include="XamDataGridDriverGenerator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="XamDataTreeDriverGenerator.cs" />
     <Compile Include="XamGridDriverGenerator.cs" />
+    <Compile Include="XamOutlookBarDriverGenerator.cs" />
     <Compile Include="XamRibbonDriverGenerator.cs" />
+    <Compile Include="XamTabControlDriverGenerator.cs" />
+    <Compile Include="XamValueEditorDriverGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
