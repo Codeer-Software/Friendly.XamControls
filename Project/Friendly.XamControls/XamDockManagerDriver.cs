@@ -4,6 +4,7 @@ using Codeer.Friendly.Dynamic;
 using System.Collections.Generic;
 using System.Diagnostics;
 using Codeer.TestAssistant.GeneratorToolKit;
+using System.Linq;
 
 namespace Friendly.XamControls
 {
@@ -24,6 +25,8 @@ namespace Friendly.XamControls
             }
             return list.ToArray();
         }
+
+        public XamContentPaneDriver GetPane(string text) => GetPanes().SingleOrDefault(e => e.HeaderText == text);
 
         static dynamic GetActivePane(dynamic dock)
         {

@@ -53,6 +53,7 @@
     <Compile Include="TreeUtility.cs" />
     <Compile Include="XamCalendarDriverGenerator.cs" />
     <Compile Include="XamComboEditorDriverGenerator.cs" />
+    <Compile Include="XamDockManagerDriverGenerator.cs" />
     <Compile Include="XamDataGridDriverGenerator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="XamDataTreeDriverGenerator.cs" />
