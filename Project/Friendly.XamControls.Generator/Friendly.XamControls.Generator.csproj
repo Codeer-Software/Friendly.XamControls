@@ -50,8 +50,11 @@
     <Compile Include="EventAdapter.cs" />
     <Compile Include="GenerateUtility.cs" />
     <Compile Include="ReflectionAccessor.cs" />
+    <Compile Include="TreeUtility.cs" />
     <Compile Include="XamDataGridDriverGenerator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XamGridDriverGenerator.cs" />
+    <Compile Include="XamRibbonDriverGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
