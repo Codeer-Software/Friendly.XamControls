@@ -81,5 +81,29 @@ namespace Test
             dates[0].Is(new DateTime(2015, 7, 15));
             dates[1].Is(new DateTime(2015, 7, 13));
         }
+
+        [TestMethod]
+        public void TestEmulateRemoveDate()
+        {
+            _calendar.EmulateChangeDate(new DateTime(2015, 7, 14));
+            _calendar.EmulateAddDate(new DateTime(2015, 7, 13));
+            _calendar.EmulateRemoveDate(new DateTime(2015, 7, 14));
+
+            var dates = _calendar.SelectedDates;
+            dates.Length.Is(1);
+            dates[0].Is(new DateTime(2015, 7, 13));
+        }
+
+        [TestMethod]
+        public void TestEmulateRemovDateAsync()
+        {
+            _calendar.EmulateChangeDate(new DateTime(2015, 7, 15));
+
+            _dlg.Dynamic().ConnectSelectedDatesChanged();
+            _calendar.EmulateRemoveDate(new DateTime(2015, 7, 15), new Async());
+            new NativeMessageBox(_dlg.WaitForNextModal()).EmulateButtonClick("OK");
+            var dates = _calendar.SelectedDates;
+            dates.Length.Is(0);
+        }
     }
 }
