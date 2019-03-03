@@ -55,7 +55,7 @@ namespace Friendly.XamControls.Generator
 
         void ApplicationMenuItemClick(string[] path)
         {
-            var args = string.Join(", ", path.Select(e => "\"" + e + "\""));
+            var args = string.Join(", ", path.Select(e => GenerateUtility.ToLiteral(e)));
             AddSentence(new TokenName(), ".ApplicationMenu.GetItem(", args, ").EmulateClick(", new TokenAsync(CommaType.Non), ");");
         }
 
