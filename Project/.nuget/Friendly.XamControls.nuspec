@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Friendly.XamControls</id>
-    <version>1.7.2</version>
+    <version>1.7.3</version>
     <title>Friendly.XamControls</title>
     <authors>TatsuyaIshikawa</authors>
     <owners>Codeer</owners>
@@ -13,7 +13,7 @@
     <description>You will be able to manipulate Infragistics Xam Controls. This library is built on Friendly Layer.</description>
     <tags>Infragistics Friendly Testing Windows WPF Automation Codeer Codeer.Friendly</tags>
     <dependencies>
-      <dependency id="Codeer.Friendly.Windows.Grasp" version="2.14.2" />
+      <dependency id="Codeer.Friendly.Windows.Grasp" version="2.15.0" />
       <dependency id="Codeer.TestAssistant.GeneratorToolKit" version="3.13.0" />
     </dependencies>
     <frameworkAssemblies>
