@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Friendly.XamControls</id>
-    <version>1.9.0</version>
+    <version>1.10.0</version>
     <title>Friendly.XamControls</title>
     <authors>TatsuyaIshikawa</authors>
     <owners>Codeer</owners>
@@ -14,7 +14,7 @@
     <tags>Infragistics Friendly Testing Windows WPF Automation Codeer Codeer.Friendly</tags>
     <dependencies>
       <dependency id="Codeer.Friendly.Windows.Grasp" version="2.16.0" />
-      <dependency id="Codeer.TestAssistant.GeneratorToolKit" version="3.14.0" />
+      <dependency id="Codeer.TestAssistant.GeneratorToolKit" version="3.15.0" />
     </dependencies>
     <frameworkAssemblies>
       <frameworkAssembly assemblyName="PresentationCore" targetFramework="net40" />
